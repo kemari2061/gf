@@ -100,6 +100,13 @@ $( document ).ready(function () {
 				'<a href="#" onclick="document.title = \'5AR type F\';findAR1()">5AR type F</a> &nbsp; '+
 				'<a href="#" onclick="document.title = \'5AR type b\';findAR2()">5AR type b</a> &nbsp; <br /><br />'+
 				'<a href="#" onclick="document.title = \'5HG type F\';findHG1()">5HG type F</a> &nbsp; <br /><br />'+
+				'<h1>BetaVN Custom Formation Types:</h1>'+
+				'<a href="#" onclick="document.title = \'2SMG/HG/2RF type F\';findSMGRF1()">2SMG/HG/2RF type F</a> &nbsp; <br /><br />'+
+				'<a href="#" onclick="document.title = \'2SMG/HG/2RF type b\';findSMGRF2()">2SMG/HG/2RF type b</a> &nbsp; <br /><br />'+
+				'<a href="#" onclick="document.title = \'2SMG/HG/2MG type F\';findSMGMG1()">2SMG/HG/2MG type F</a> &nbsp; <br /><br />'+
+				'<a href="#" onclick="document.title = \'2SMG/HG/2MG type b\';findSMGMG2()">2SMG/HG/2MG type b</a> &nbsp; <br /><br />'+
+				'<a href="#" onclick="document.title = \'2SMG/2AR/1RF type F\';findSMGARRF1()">2SMG/2AR/1RF type F</a> &nbsp; <br /><br />'+
+				'<a href="#" onclick="document.title = \'2SMG/2AR/1RF type b\';findSMGARRF2()">2SMG/2AR/1RF type b</a> &nbsp; <br /><br />'+
 				'<img src="images/grid.png" />'+
 				'<br /><br /><br /><br />  &nbsp;' +
 				'<a href="https://github.com/chibimonxd/gf">Original Auto Formation by chibimonxd</a><br /><br /> &nbsp;' +
@@ -1785,6 +1792,420 @@ function findHG1() {
 
 
 }
+
+//Beta's Formation
+
+
+
+
+function findSMGRF1() {
+
+	initTable();
+
+
+	
+
+	// 7 8 9
+	// 4 5 6
+	// 1 2 3
+
+	RESULTLIST = new Array();
+	var hg = new Array();
+	var rf = new Array();
+	var smg = new Array();
+	var ar = new Array();
+	var mg = new Array();
+	var sg = new Array();
+
+
+	var combineStr =",";
+	for (var d = 0; d < $(".checkB:checked").length; d++) {
+		combineStr += $(".checkB:checked:eq("+d+")").val() + ",";
+	}
+
+
+	for (var i = 0; i < mCharData.length;i++) {
+
+		if (mCharData[i].version == "cn") continue;
+	
+		//if (mCharData[i].rarity != 5) continue;
+		if (combineStr.indexOf(","+mCharData[i].id+",") === -1) { continue; }
+
+		mCharData[i].used2 = 0;
+		mCharData[i].used3 = 0;
+		mCharData[i].used4 = 0;
+		mCharData[i].used5 = 0;
+		if ((mCharData[i].type == "hg") || (mCharData[i].name == "AUG")) {
+			hg[hg.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "rf") {
+			rf[rf.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "smg") {
+			smg[smg.length] = mCharData[i];
+		}
+	}
+
+
+	rf.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	smg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	hg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	
+	loopCore(
+		7,4,1,8,5,
+		rf,
+		hg,
+		rf,
+		smg,
+		smg
+	);
+		
+	
+
+
+}
+
+function findSMGRF2() {
+
+	initTable();
+
+
+	
+
+	// 7 8 9
+	// 4 5 6
+	// 1 2 3
+
+	RESULTLIST = new Array();
+	var hg = new Array();
+	var rf = new Array();
+	var smg = new Array();
+	var ar = new Array();
+	var mg = new Array();
+	var sg = new Array();
+
+
+	var combineStr =",";
+	for (var d = 0; d < $(".checkB:checked").length; d++) {
+		combineStr += $(".checkB:checked:eq("+d+")").val() + ",";
+	}
+
+
+	for (var i = 0; i < mCharData.length;i++) {
+
+		if (mCharData[i].version == "cn") continue;
+	
+		//if (mCharData[i].rarity != 5) continue;
+		if (combineStr.indexOf(","+mCharData[i].id+",") === -1) { continue; }
+
+		mCharData[i].used2 = 0;
+		mCharData[i].used3 = 0;
+		mCharData[i].used4 = 0;
+		mCharData[i].used5 = 0;
+		if ((mCharData[i].type == "hg") || (mCharData[i].name == "AUG")) {
+			hg[hg.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "rf") {
+			rf[rf.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "smg") {
+			smg[smg.length] = mCharData[i];
+		}
+	}
+
+
+	rf.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	smg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	hg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	
+	loopCore(
+		7,4,1,5,2,
+		rf,
+		hg,
+		rf,
+		smg,
+		smg
+	);
+		
+	
+
+
+}
+
+
+function findSMGMG1() {
+
+	initTable();
+
+
+	
+
+	// 7 8 9
+	// 4 5 6
+	// 1 2 3
+
+	RESULTLIST = new Array();
+	var hg = new Array();
+	var rf = new Array();
+	var smg = new Array();
+	var ar = new Array();
+	var mg = new Array();
+	var sg = new Array();
+
+
+	var combineStr =",";
+	for (var d = 0; d < $(".checkB:checked").length; d++) {
+		combineStr += $(".checkB:checked:eq("+d+")").val() + ",";
+	}
+
+
+	for (var i = 0; i < mCharData.length;i++) {
+
+		if (mCharData[i].version == "cn") continue;
+	
+		//if (mCharData[i].rarity != 5) continue;
+		if (combineStr.indexOf(","+mCharData[i].id+",") === -1) { continue; }
+
+		mCharData[i].used2 = 0;
+		mCharData[i].used3 = 0;
+		mCharData[i].used4 = 0;
+		mCharData[i].used5 = 0;
+		if ((mCharData[i].type == "hg") || (mCharData[i].name == "AUG")) {
+			hg[hg.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "mg") {
+			mg[mg.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "smg") {
+			smg[smg.length] = mCharData[i];
+		}
+	}
+
+
+	mg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	smg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	hg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	
+	loopCore(
+		7,4,1,8,5,
+		mg,
+		hg,
+		mg,
+		smg,
+		smg
+	);
+		
+	
+
+
+}
+
+function findSMGMG2() {
+
+	initTable();
+
+
+	
+
+	// 7 8 9
+	// 4 5 6
+	// 1 2 3
+
+	RESULTLIST = new Array();
+	var hg = new Array();
+	var rf = new Array();
+	var smg = new Array();
+	var ar = new Array();
+	var mg = new Array();
+	var sg = new Array();
+
+
+	var combineStr =",";
+	for (var d = 0; d < $(".checkB:checked").length; d++) {
+		combineStr += $(".checkB:checked:eq("+d+")").val() + ",";
+	}
+
+
+	for (var i = 0; i < mCharData.length;i++) {
+
+		if (mCharData[i].version == "cn") continue;
+	
+		//if (mCharData[i].rarity != 5) continue;
+		if (combineStr.indexOf(","+mCharData[i].id+",") === -1) { continue; }
+
+		mCharData[i].used2 = 0;
+		mCharData[i].used3 = 0;
+		mCharData[i].used4 = 0;
+		mCharData[i].used5 = 0;
+		if ((mCharData[i].type == "hg") || (mCharData[i].name == "AUG")) {
+			hg[hg.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "mg") {
+			mg[mg.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "smg") {
+			smg[smg.length] = mCharData[i];
+		}
+	}
+
+
+	mg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	smg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	hg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	
+	loopCore(
+		7,4,1,5,2,
+		mg,
+		hg,
+		mg,
+		smg,
+		smg
+	);
+		
+	
+
+
+}
+
+function findSMGARRF1() {
+
+	initTable();
+
+
+	
+
+	// 7 8 9
+	// 4 5 6
+	// 1 2 3
+
+	RESULTLIST = new Array();
+	var hg = new Array();
+	var rf = new Array();
+	var smg = new Array();
+	var ar = new Array();
+	var mg = new Array();
+	var sg = new Array();
+
+
+	var combineStr =",";
+	for (var d = 0; d < $(".checkB:checked").length; d++) {
+		combineStr += $(".checkB:checked:eq("+d+")").val() + ",";
+	}
+
+
+	for (var i = 0; i < mCharData.length;i++) {
+
+		if (mCharData[i].version == "cn") continue;
+	
+		//if (mCharData[i].rarity != 5) continue;
+		if (combineStr.indexOf(","+mCharData[i].id+",") === -1) { continue; }
+
+		mCharData[i].used2 = 0;
+		mCharData[i].used3 = 0;
+		mCharData[i].used4 = 0;
+		mCharData[i].used5 = 0;
+		if (mCharData[i].type == "rf") {
+			rf[rf.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "smg") {
+			smg[smg.length] = mCharData[i];
+		}
+		if ((mCharData[i].type == "ar") || (mCharData[i].name == "UMP40")) {
+			ar[ar.length] = mCharData[i];
+		}
+	}
+
+
+	ar.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	smg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	rf.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	
+	loopCore(
+		7,4,1,8,5,
+		ar,
+		ar,
+		rf,
+		smg,
+		smg
+	);
+		
+	
+
+
+}
+
+function findSMGARRF2() {
+
+	initTable();
+
+
+	
+
+	// 7 8 9
+	// 4 5 6
+	// 1 2 3
+
+	RESULTLIST = new Array();
+	var hg = new Array();
+	var rf = new Array();
+	var smg = new Array();
+	var ar = new Array();
+	var mg = new Array();
+	var sg = new Array();
+
+
+	var combineStr =",";
+	for (var d = 0; d < $(".checkB:checked").length; d++) {
+		combineStr += $(".checkB:checked:eq("+d+")").val() + ",";
+	}
+
+
+	for (var i = 0; i < mCharData.length;i++) {
+
+		if (mCharData[i].version == "cn") continue;
+	
+		//if (mCharData[i].rarity != 5) continue;
+		if (combineStr.indexOf(","+mCharData[i].id+",") === -1) { continue; }
+
+		mCharData[i].used2 = 0;
+		mCharData[i].used3 = 0;
+		mCharData[i].used4 = 0;
+		mCharData[i].used5 = 0;
+		if (mCharData[i].type == "rf") {
+			rf[rf.length] = mCharData[i];
+		}
+		if (mCharData[i].type == "smg") {
+			smg[smg.length] = mCharData[i];
+		}
+		if ((mCharData[i].type == "ar") || (mCharData[i].name == "UMP40")) {
+			ar[ar.length] = mCharData[i];
+		}
+	}
+
+
+	ar.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	smg.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	rf.sort(function(a, b){return b.dmgSkill-a.dmgSkill});
+	
+	loopCore(
+		7,4,1,5,2,
+		ar,
+		ar,
+		rf,
+		smg,
+		smg
+	);
+		
+	
+
+
+}
+
+
+
+
+
+
 
 
 
