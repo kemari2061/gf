@@ -4382,19 +4382,19 @@
             "firstCooldownTime":4,
             "cooldownTime":{"1":20, "10": 16},
             "detailText":{
-                "val":"提升自身火力{0}%,持續{1}秒"},
+                "val":"Increases M4A1s damage by {0}% for {1} seconds."},
             "effects":[
                 {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":45, "10":75}, "time":{"1":6, "10":10}}
             ]},
         "mod2Skill":{
-            "name":"伸冤者印記",
+            "name":"Avenger's Mark",
             "detailText":{
-                "val":"開啟火力專注期間會對目標附加伸冤者印記<br>當我方場上單位數量為3及以下時, 以攻速降低70%為代價,<br>每次普攻對目標造成{0}%的傷害,同時對2.5範圍內的目標<br>附加印記並造成100%的濺射傷害(期間火力專注仍然有效) "},
+                "val":"During the effects of Damage Focus T, apply Avenger's Mark to targeted enemies. If fewer than 3 allied T-dolls are present on the field, decrease rate of fire by 70% and deal {0}% damage to the primary target while attacking. Enemies within 2.5 units take 100% splash damage. (The damage increase from Damage Focus T still applies during this effect.)"},
             "effects":[
                 {"filter":"active", "allyCountLessOrEqualFilter":3, "type":"debuff", "target":"self", "attribute":"fireOfRate", "value":{"0":70}, "untilBuffEnd":"Damage Focus T"},
-                {"filter":"attackReplace", "buffFilter":"伸冤者印記", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":3, "10":6}, "toFixedCount":2},
+                {"filter":"attackReplace", "buffFilter":"avengers_mark", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":3, "10":6}, "toFixedCount":2},
                 {"filter":"attackAttacked", "buffFilter":"Damage Focus T", "type":"debuff", "target":"enemyAttackAttacked", "attribute":"dmg", "value":{"0":0}},
-                {"filter":"attack", "buffFilter":"伸冤者印記", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"0":1}}
+                {"filter":"attack", "buffFilter":"avengers_mark", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"0":1}}
             ]},
         "aura":{
             "target":"ar", "effect":{
@@ -4454,10 +4454,10 @@
         "mod2Skill":{
             "name":"罪與罰",
             "detailText":{
-                "val":"開啟突擊專注時會使用主副武器同時攻擊,<br>副武器造成{0}%的傷害,對受伸冤者印記影響的目標造成{1}%的傷害"},
+                "val":"開啟突擊專注時會使用主副武器同時攻擊,<br>副武器造成{0}%的傷害,對受avengers_mark影響的目標造成{1}%的傷害"},
             "effects":[
-                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetNotWithBuff":"伸冤者印記", "value":{"1":0.05, "10":0.1}, "toFixedCount":2},
-                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetWithBuff":"伸冤者印記", "value":{"1":0.1, "10":0.2}, "toFixedCount":2}
+                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetNotWithBuff":"avengers_mark", "value":{"1":0.05, "10":0.1}, "toFixedCount":2},
+                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetWithBuff":"avengers_mark", "value":{"1":0.1, "10":0.2}, "toFixedCount":2}
             ]},
         "aura":{
             "target":"smg", "effect":{
