@@ -4407,14 +4407,14 @@
                 {"x":0, "y":-1},
                 {"x":1, "y":-1}]}},
 				
-	{"id":"20039", "name":"莫辛-納甘", "type":"rf", "rarity":"5", "mod":true,
+	{"id":"20039", "name":"Mosin-Nagant", "type":"rf", "rarity":"5", "mod":true,
         "hp":{"mod1":90, "mod2":90, "mod3":91},
         "dmg":{"mod1":134, "mod2":135, "mod3":136},
         "dodge":{"mod1":39, "mod2":39, "mod3":40},
         "hit":{"mod1":87, "mod2":88, "mod3":89},
         "fireOfRate":{"mod1":31, "mod2":31, "mod3":31},
         "skill":{
-            "name":"沉穩射擊",
+            "name":"Designated Shot",
             "type":"attack",
             "target":"enemy_farthest",
             "firstCooldownTime":"10",
@@ -4424,9 +4424,9 @@
                 "attack":{"1":"3.2", "10":"6.5"},
                 "time":{"1":"", "10":""}}},
 		"mod2Skill":{
-            "name":"蒼白收割者",
+            "name":"Pure White Reaper",
             "detailText":{
-                "val":"普通攻擊擊殺敵人後提升自身傷害{2}%,持續{1}秒<br>技能擊殺敵人後提升自身射速{0}%"},
+                "val":"Killing an enemy unit with her regular attack increases Mosin-Nagant's damage by {2}% for {1} seconds.<br>Killing an enemy unit with Designated Shot increases Mosin-Nagant's rate of fire by {0}%."},
             "effects":[
                 {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":15, "10":30}, "time":{"1":3, "10":3}},
 				{"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":0, "10":0}, "time":{"1":3, "10":3}}
