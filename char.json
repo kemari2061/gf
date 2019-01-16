@@ -5145,14 +5145,14 @@
                 {"x":-1, "y":-1},
                 {"x":-1, "y":1},
                 {"x":-1, "y":0}]}},
-    {"id":"20005", "name":"Nagant M1895 (mod)", "type":"hg", "rarity":"4", "mod":true,
+    {"id":"20005", "name":"Nagant M1895", "type":"hg", "rarity":"4", "mod":true,
         "hp":{"mod1":71, "mod2":71, "mod3":72},
         "dmg":{"mod1":35, "mod2":35, "mod3":35},
         "hit":{"mod1":47, "mod2":48, "mod3":48},
         "dodge":{"mod1":98, "mod2":99, "mod3":100},
         "fireOfRate":{"mod1":45, "mod2":45, "mod3":45},
         "skill":{
-            "name":"Firepower Suppresion N",
+            "name":"Firepower Suppression N",
             "firstCooldownTime":6,
             "cooldownTime":{"1":15, "10":12},
             "detailText":{
