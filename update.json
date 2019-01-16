@@ -1,4 +1,5 @@
 {"update":[
+    {"date": "Wed Jan 16 23:00:00 2019 +0100", "log": ["Forked. TL/CSS updates. Fixed RoF rounding issue that gave incorrect output."]},
     {"date": "Sat Oct 27 11:00:00 2018 +0100", "log": ["Fixed some styling, new feature: copy button for formation code/url"]},
 	{"date": "Fri Oct 26 14:30:00 2018 +0100", "log": ["HK23 and some other stuff"]},
     {"date": "Sun Aug 05 14:30:00 2018 +0100", "log": ["Pushed MT-9 & CZ-75 to available pool"]},
