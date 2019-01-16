@@ -127,17 +127,17 @@
             "dodge":{"min": "20", "max":"25"},
             "dmg":{"min": "-8", "max":"-6"}
         }},
-    {"id":"42", "name":"Type1防彈插板", "type":"bulletproof_board", "rarity":"3", "strengthenCoefficient":"0.04",
+    {"id":"42", "name":"Type1 Armor Plate", "type":"bulletproof_board", "rarity":"3", "strengthenCoefficient":"0.04",
         "effect":{
             "armor":{"min": "3", "max":"3"},
             "dodge":{"min": "-1", "max":"-1"}
         }},
-    {"id":"43", "name":"Type2防彈插板", "type":"bulletproof_board", "rarity":"4", "strengthenCoefficient":"0.04",
+    {"id":"43", "name":"Type2 Armor Plate", "type":"bulletproof_board", "rarity":"4", "strengthenCoefficient":"0.04",
         "effect":{
             "armor":{"min": "4", "max":"5"},
             "dodge":{"min": "-1", "max":"-1"}
         }},
-    {"id":"44", "name":"Type3防彈插板", "type":"bulletproof_board", "rarity":"5", "strengthenCoefficient":"0.04",
+    {"id":"44", "name":"Type3 Armor Plate", "type":"bulletproof_board", "rarity":"5", "strengthenCoefficient":"0.04",
         "effect":{
             "armor":{"min": "6", "max":"8"},
             "dodge":{"min": "-3", "max":"-2"}
@@ -237,56 +237,56 @@
             "dmg":{"min": "7", "max":"10"},
             "armorPiercing":{"min": "-10", "max":"-7"}
         }},
-    {"id":"73", "name":"#1獵鹿彈", "type":"shotgun_bullet", "rarity":"2", "strengthenCoefficient":"0.05",
+    {"id":"73", "name":"#1 Buckshot", "type":"shotgun_bullet", "rarity":"2", "strengthenCoefficient":"0.05",
         "effect":{
             "dmg":{"min": "1", "max":"1"},
             "criDmg":{"min": "3", "max":"4"}
         }},
-    {"id":"74", "name":"#0獵鹿彈", "type":"shotgun_bullet", "rarity":"3", "strengthenCoefficient":"0.05",
+    {"id":"74", "name":"#0 Buckshot", "type":"shotgun_bullet", "rarity":"3", "strengthenCoefficient":"0.05",
         "effect":{
             "dmg":{"min": "2", "max":"3"},
             "criDmg":{"min": "5", "max":"6"}
         }},
-    {"id":"75", "name":"#00獵鹿彈", "type":"shotgun_bullet", "rarity":"4", "strengthenCoefficient":"0.05",
+    {"id":"75", "name":"#00 Buckshot", "type":"shotgun_bullet", "rarity":"4", "strengthenCoefficient":"0.05",
         "effect":{
             "dmg":{"min": "4", "max":"6"},
             "criDmg":{"min": "7", "max":"9"}
         }},
-    {"id":"76", "name":"#000獵鹿彈", "type":"shotgun_bullet", "rarity":"5", "strengthenCoefficient":"0.05",
+    {"id":"76", "name":"#000 Buckshot", "type":"shotgun_bullet", "rarity":"5", "strengthenCoefficient":"0.05",
         "effect":{
             "dmg":{"min": "7", "max":"10"},
             "criDmg":{"min": "10", "max":"15"}
         }},
-    {"id":"77", "name":"BK獨頭彈", "type":"shotgun_bullet", "rarity":"2", "strengthenCoefficient":"0.07",
+    {"id":"77", "name":"BK Slug", "type":"shotgun_bullet", "rarity":"2", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
             "dmg_multiple":{"min": "3", "max":"3"},
             "hit":{"min": "1", "max":"2"}
         }},
-    {"id":"78", "name":"FST獨頭彈", "type":"shotgun_bullet", "rarity":"3", "strengthenCoefficient":"0.07",
+    {"id":"78", "name":"FST Slug", "type":"shotgun_bullet", "rarity":"3", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
             "dmg_multiple":{"min": "3", "max":"3"},
             "hit":{"min": "3", "max":"4"}
         }},
-    {"id":"79", "name":"WAD獨頭彈", "type":"shotgun_bullet", "rarity":"4", "strengthenCoefficient":"0.07",
+    {"id":"79", "name":"WAD Slug", "type":"shotgun_bullet", "rarity":"4", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
             "dmg_multiple":{"min": "3", "max":"3"},
             "hit":{"min": "5", "max":"7"}
         }},
-    {"id":"80", "name":"SABOT獨頭彈", "type":"shotgun_bullet", "rarity":"5", "strengthenCoefficient":"0.07",
+    {"id":"80", "name":"SABOT Slug", "type":"shotgun_bullet", "rarity":"5", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
             "dmg_multiple":{"min": "3", "max":"3"},
             "hit":{"min": "8", "max":"12"}
         }},
-    {"id":"81", "name":"16Lab防彈插板", "type":"bulletproof_board", "rarity":"5", "strengthenCoefficient":"0.04",
+    {"id":"81", "name":"16Lab Armor Plate", "type":"bulletproof_board", "rarity":"5", "strengthenCoefficient":"0.04",
         "effect":{
             "armor":{"min": "8", "max":"8"},
             "dodge":{"min": "-2", "max":"-2"}
         }},
-    {"id":"82", "name":"16Lab獵鹿彈", "type":"shotgun_bullet", "rarity":"5", "strengthenCoefficient":"0.05",
+    {"id":"82", "name":"16Lab Buckshot", "type":"shotgun_bullet", "rarity":"5", "strengthenCoefficient":"0.05",
         "effect":{
             "dmg":{"min": "10", "max":"10"},
             "criDmg":{"min": "15", "max":"15"}
@@ -306,7 +306,7 @@
             "criRate":{"min": "32", "max":"32", "strengthenCoefficient":"0.05"},
             "criDmg":{"min": "10", "max":"10", "strengthenCoefficient":"0.05"}
         }},
-    {"id":"86", "name":"Hayha記憶晶片", "type":"chip", "rarity":"5", "can_char":["39", "20039"],
+    {"id":"86", "name":"Hayha Memory Chip", "type":"chip", "rarity":"5", "can_char":["39", "20039"],
         "effect":{
             "dmg":{"min": "18", "max":"25", "strengthenCoefficient":"0.02"},
             "dodge":{"min": "2", "max":"4", "strengthenCoefficient":"0.03"},
@@ -332,7 +332,7 @@
             "movementSpeed":{"min": "-3", "max":"-3"},
             "criDmg":{"min": "11", "max":"15"}
         }},
-    {"id":"91", "name":"特殊戰機動護甲", "type":"bulletproof_board", "rarity":"5", "strengthenCoefficient":"0.03", "can_char":["54"],
+    {"id":"91", "name":"Custom Exoskeletal Armor", "type":"bulletproof_board", "rarity":"5", "strengthenCoefficient":"0.03", "can_char":["54"],
         "effect":{
             "armor":{"min": "15", "max":"15"},
             "dodge":{"min": "8", "max":"8"},
@@ -344,18 +344,18 @@
             "dodge":{"min": "20", "max":"25", "strengthenCoefficient":"0.04"},
             "criDmg":{"min": "11", "max":"15", "strengthenCoefficient":"0.07"}
         }},
-    {"id":"93", "name":"PKN03M夜視瞄具", "type":"night_battle_equipment", "rarity":"5", "can_char":["118"],
+    {"id":"93", "name":"PKN03M Night Scope", "type":"night_battle_equipment", "rarity":"5", "can_char":["118"],
         "effect":{
             "dmg":{"min": "5", "max":"5", "strengthenCoefficient":"0.06"},
             "nightSight":{"min": "100", "max":"100", "strengthenCoefficient":"0.00"}
         }},
-    {"id":"94", "name":"專用戰術記憶體", "type":"chip", "rarity":"5", "can_char":["00185"],
+    {"id":"94", "name":"Dedicated Tactical Memory", "type":"chip", "rarity":"5", "can_char":["185"],
         "effect":{
             "dmg":{"min":3, "max":5, "strengthenCoefficient":0.06},
             "hit":{"min":-5, "max":-3, "strengthenCoefficient":0},
             "ammoCount":{"min":3, "max":4, "strengthenCoefficient":0.05}
         }},
-    {"id":"99", "name":"遺留的武器庫", "type":"special_human_form", "rarity":"5", "can_char":["20055", "55"],
+    {"id":"99", "name":"Inherited Weapon Arsenal", "type":"special_human_form", "rarity":"5", "can_char":["20055", "55"],
         "effect":{
             "dmg":{"min":2, "max":3, "strengthenCoefficient":0.07},
             "armor":{"min":9, "max":12, "strengthenCoefficient":0.025}
