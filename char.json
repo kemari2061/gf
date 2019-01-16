@@ -4681,7 +4681,7 @@
             "grid":[
                 {"x":1, "y":1},
                 {"x":1, "y":0}]}},
-    {"id":"00199", "name":"Type80", "type":"mg", "rarity":"4",
+    {"id":"00199", "name":"Type 80", "type":"mg", "rarity":"4",
         "hp":{"1":87, "100":174},
         "dmg":{"1":36, "100":93},
         "hit":{"1":4, "100":26},
@@ -4693,7 +4693,7 @@
             "firstCooldownTime":8,
             "cooldownTime":{"1":18, "10":18},
             "detailText":{
-                "0":"提升自身火力{0}%,持續{1}秒",
+                "0":"Increases Type 80's damage by {0}% for {1} seconds.",
                 "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":0, "attr":"time"}]},
             "effects":[
                 {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":25, "10":70}, "time":{"1":4, "10":6}}
