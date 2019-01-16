@@ -4392,9 +4392,9 @@
                 "val":"During the effects of Damage Focus T, apply Avenger's Mark to targeted enemies. If fewer than 3 allied T-dolls are present on the field, decrease rate of fire by 70% and deal {0}% damage to the primary target while attacking. Enemies within 2.5 units take 100% splash damage. (The damage increase from Damage Focus T still applies during this effect.)"},
             "effects":[
                 {"filter":"active", "allyCountLessOrEqualFilter":3, "type":"debuff", "target":"self", "attribute":"fireOfRate", "value":{"0":70}, "untilBuffEnd":"Damage Focus T"},
-                {"filter":"attackReplace", "buffFilter":"avengers_mark", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":3, "10":6}, "toFixedCount":2},
+                {"filter":"attackReplace", "buffFilter":"Avenger's Mark", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":false, "value":{"1":3, "10":6}, "toFixedCount":2},
                 {"filter":"attackAttacked", "buffFilter":"Damage Focus T", "type":"debuff", "target":"enemyAttackAttacked", "attribute":"dmg", "value":{"0":0}},
-                {"filter":"attack", "buffFilter":"avengers_mark", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"0":1}}
+                {"filter":"attack", "buffFilter":"Avenger's Mark", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"0":1}}
             ]},
         "aura":{
             "target":"ar", "effect":{
@@ -4456,8 +4456,8 @@
             "detailText":{
                 "val":"While Assault Focus T is active, ST AR15 will raise her secondary weapon and attack simultaneously. Secondary weapon deals {0}% of the primary damage, increased to {1}% against targets with Avenger's Mark."},
             "effects":[
-                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetNotWithBuff":"avengers_mark", "value":{"1":0.05, "10":0.1}, "toFixedCount":2},
-                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetWithBuff":"avengers_mark", "value":{"1":0.1, "10":0.2}, "toFixedCount":2}
+                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetNotWithBuff":"Avenger's Mark", "value":{"1":0.05, "10":0.1}, "toFixedCount":2},
+                {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetWithBuff":"Avenger's Mark", "value":{"1":0.1, "10":0.2}, "toFixedCount":2}
             ]},
         "aura":{
             "target":"smg", "effect":{
@@ -4504,15 +4504,15 @@
         "hit":{"1":9, "100":67},
         "fireOfRate":{"1":48, "100":76},
         "skill":{
-            "name":"人偶板機",
+            "name":"Doll trigger",
             "firstCooldownTime":6,
             "cooldownTime":{"1":10, "10":8},
             "detailText":{
-                "0":"變更攻擊目標時會造成兩次傷害。<br>開啟技能期間每次攻擊都會造成兩次傷害,持續{0}秒",
+                "0":"Passive: Deals an extra hit when switching targets. Active: Deals an extra hit with every attack for {0} seconds.",
                 "format":[{"textIndex":0, "effectIndex":0, "attr":"time"}]},
             "effects":[
                 {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"0":0}, "time":{"1":3, "10":5}},
-                {"filter":"attack", "buffFilter":"人偶板機", "type":"attack", "target":"enemy", "value":{"0":1}}
+                {"filter":"attack", "buffFilter":"Doll trigger", "type":"attack", "target":"enemy", "value":{"0":1}}
             ]},
         "aura":{
             "target":"smg", "effect":{
