@@ -4454,7 +4454,7 @@
         "mod2Skill":{
             "name":"Crime and Punishment",
             "detailText":{
-                "val":"When Assault Focus T is active, ST AR15 will raise her secondary weapon and attack simultaneously. Secondary weapon deals {0}% of the primary damage, increased to {1}% against targets with Avenger's Mark."},
+                "val":"While Assault Focus T is active, ST AR15 will raise her secondary weapon and attack simultaneously. Secondary weapon deals {0}% of the primary damage, increased to {1}% against targets with Avenger's Mark."},
             "effects":[
                 {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetNotWithBuff":"avengers_mark", "value":{"1":0.05, "10":0.1}, "toFixedCount":2},
                 {"filter":"attack", "buffFilter":"Assault Focus T", "type":"attack", "target":"enemy", "targetWithBuff":"avengers_mark", "value":{"1":0.1, "10":0.2}, "toFixedCount":2}
@@ -4478,15 +4478,15 @@
             "firstCooldownTime":5,
             "cooldownTime":{"1":10, "10": 8},
             "detailText":{
-                "0":"提升自身火力{0}%,持續{1}秒",
+                "0":"Increases FN-49's damage by {0}% for {1} seconds.",
                 "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
             "effects":[
                 {"filter":"active", "type":"buff", "target":"self","attribute":"dmg", "value":{"1":40, "10":65}, "time":{"1":3, "10":5}}
             ]},
         "mod2Skill":{
-            "name":"凜冽鬥志",
+            "name":"Cold Fighting Spirit",
             "detailText":{
-                "0":"火力專注發動時會額外提升射速{0}%,持續{1}秒",
+                "0":"When Damage Focus is activated, increases FN-49's rate of fire by {0}% for {1} seconds.",
                 "format":[{"textIndex":0, "effectIndex":0, "attr":"value"}, {"textIndex":1, "effectIndex":0, "attr":"time"}]},
             "effects":[
                 {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":6, "10":15}, "time":{"1":3, "10":5}}
