@@ -233,6 +233,38 @@ body {
     border:1px outset #ace;
 }
 
+.pick_button_icon {
+    background-color: black;
+    width: 107px;
+    height: 55px;
+    border-radius:0px;
+    display: inline-block;
+}
+
+.pick_button_hg {
+    background-image: url("assets/Icon_HG.png");
+}
+
+.pick_button_smg {
+    background-image: url("assets/Icon_SMG.png");
+}
+
+.pick_button_rf {
+    background-image: url("assets/Icon_RF.png");
+}
+
+.pick_button_ar {
+    background-image: url("assets/Icon_AR.png");
+}
+
+.pick_button_mg {
+    background-image: url("assets/Icon_MG.png");
+}
+
+.pick_button_sg {
+    background-image: url("assets/Icon_SG.png");
+}
+
 .view_equipment_button {
     display: inline-block;
     width:110px;

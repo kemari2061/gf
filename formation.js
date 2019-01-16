@@ -676,8 +676,8 @@ function initDialog() {
     var typeList = copyObject(TYPES);
     typeList.push(MOD);
     typeList.forEach(v => {
-        var item = $('<div></div>').addClass("pick_button hover").html(v).attr("value", v).click(function() {
-            openDialogPickerByType($(this).attr("value"));
+        var item = $('<div></div>').addClass("pick_button pick_button_icon hover pick_button_" + v).html(v).attr("value", "").click(function() {
+            openDialogPickerByType(v);
         });
         $('<td></td>').append(item).appendTo(row);
     });
