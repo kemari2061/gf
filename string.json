@@ -37,7 +37,7 @@
     "cooldownTime":"CD {0}s",
     "skillTimes":"for {0}s",
     "prepareTime":"After aiming for {0}s, shoot target for ",
-    "self_aura_grid":"自身影響格上的隊友",
+    "self_aura_grid":"Guns located on her tiles ",
     "cooldownTimeAura":"Reduce Skill CD by ",
     "everyAttackTimesOnNext":"After every {0} hits，the next hit will inflict ",
     "everyChangeAmmoCount":"After each reload ",
