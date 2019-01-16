@@ -4234,21 +4234,21 @@
             "grid":[
                 {"x":"1", "y":"1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"00197", "name":"卡爾卡諾M1891", "type":"rf", "rarity":"5",
+    {"id":"00197", "name":"Carcano M1891", "type":"rf", "rarity":"5",
         "hp":{"1":"40", "100":"80"},
         "dmg":{"1":"45", "100":"138"},
         "dodge":{"1":"6", "100":"42"},
         "hit":{"1":"13", "100":"85"},
         "fireOfRate":{"1":"22", "100":"34"},
         "skill":{
-            "name":"瑪爾斯號角",
+            "name":"War horn of Mars",
             "type":"buff",
             "target":"self",
             "everyAttackChance":"40",
             "firstCooldownTime":"6",
             "cooldownTime":{"1":"10", "10": "8"},
             "detailText":{
-                "val":"主動:使用後<br>隊伍中每存在一組步槍人形<br>自身暴擊與射速提升{0}%<br>持續{1}秒。被動：攻擊有40%機率使同列所有我方人形暴擊與射速提升{2}%<br>持續2秒(疊加上限3層)."
+                "val":"Active: Upon activation, increase own crit rate and rate of fire by {0}% for every RF unit present in the echelon, last for {1} seconds. Passive: When attacking, 40% chance to improve crit rate and rate of fire for T-Dolls standing on the same column by {2}%, last for 2 seconds, effect stacks up to 3 times."
                 },
             "stack":3,
             "effect":{
@@ -4256,7 +4256,7 @@
                 "fireOfRate":{"1":"5", "10":"8", "multiplyByTypeCount": "rf"},
                 "time":{"1":"5", "10":"7.5"}},
             "passive":{
-                "name":"瑪爾斯號角p",
+                "name":"war_horn_of_mars_p",
                 "howOccur":"attack",
                 "type":"buff",
                 "target":"self_column_grid",
