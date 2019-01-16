@@ -4271,18 +4271,19 @@
             "grid":[
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"1"}]}},
-    {"id":"00196", "name":"Zas M21", "type":"ar", "rarity":"5",
+    {"id":"196", "name":"Zas M21", "type":"ar", "rarity":"5",
         "hp":{"1":61, "100":121},
         "dmg":{"1":19, "100":55},
         "dodge":{"1":5, "100":41},
         "hit":{"1":6, "100":48},
         "fireOfRate":{"1":49, "100":74},
         "skill":{
-            "name":"夜梟轟鳴",
+            "name":"Howl of the Nightingale",
             "firstCooldownTime":4,
             "cooldownTime":{"1":20, "10": 16},
             "detailText":{
-                "val":"發射榴彈對半徑2.5範圍內的敵人造成{0}%的傷害<br>若命中3個及以上單位則對目標附加{1}%的增傷效果<br>持續{2}秒;若命中3個以下敵人則提升自身傷害{3}%<br>持續{4}秒。"},
+                "val":"Launches a grenade that deals {0}% damage to enemies within a 2.5 unit radius. If more than three enemy units are hit, they will take {1}% extra damage for {2} seconds. If fewer than three enemy units hits, Zas gains a damage buff of {3}% for {4} seconds."
+            },
             "effects":[
                 {"filter":"active", "type":"attack", "target":"enemy", "radius":2.5, "allLinkDo":false, "value":{"1":1.2, "10":3}},
                 {"filter":"activeAttacked", "countGreaterOrEqual":3, "type":"debuff", "target":"enemyActiveAttacked",
@@ -4305,11 +4306,11 @@
         "ammoCount":5,
         "armor":{"1":3, "100":22},
         "skill":{
-            "name":"狂熱突襲",
+            "name":"Frenzied Assault",
             "firstCooldownTime":1,
             "cooldownTime":{"1":20, "10": 16},
             "detailText":{
-                "val":"{0}秒內提升攻速{1}%<br>並裝彈量增加{2}發<br>但該輪射擊後第一次換彈時間延長1秒。"},
+                "val":"Increases rate of fire by {1}% for {0} seconds and clip size by {2}, but reload time increases by 1 second."},
             "effects":[
                 {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":32, "10":60}, "time":{"1":6, "10":8}},
                 {"filter":"active", "type":"buff", "target":"self","attribute":"ammoCount", "value":{"1":1, "2":2, "5":2, "6":3, "9":3, "10":4}},
