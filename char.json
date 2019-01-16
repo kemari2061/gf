@@ -4031,7 +4031,7 @@
                 {"x":"-1", "y":"-1"},
                 {"x":"0", "y":"-1"},
                 {"x":"1", "y":"-1"}]}},
-    {"id":"1002", "name":"愛爾菲特", "type":"sg", "rarity":"extra",
+    {"id":"1002", "name":"Elphelt", "type":"sg", "rarity":"extra",
         "hp":{"1":"138", "100":"275"},
         "dmg":{"1":"15", "100":"36"},
         "dodge":{"1":"2", "100":"9"},
@@ -4040,13 +4040,13 @@
         "ammoCount":"5",
         "armor":{"1":"3", "100":"23"},
         "skill":{
-            "name":"壓軸甜點",
+            "name":"Genoverse",
             "type":"attack",
             "target":"enemy",
             "firstCooldownTime":"10",
             "cooldownTime":{"1":"20", "10": "16"},
             "detailText":{
-                "val":"造成{0}倍的傷害並鎖定目標<br>隨後發射導彈<br>對目標周圍1.5範圍內的敵人造成{1}倍的傷害。"
+                "val":"Deals {0}x Elphelt's damage and locks on to the target before launching a missile that deals {1}x Elphelt's damage to enemies within 1.5 unit radius."
                 },
             "effect":{
                 "attack":{"1":"4", "10":"8"},
