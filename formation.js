@@ -2165,13 +2165,13 @@ function updateCharObsForAura() {
         if (mGridToChar[GRIDS[i]] != "") {
             var charObj = mGridToChar[GRIDS[i]];
 
-            charObj.c.dmg = Math.floor(charObj.c.dmg * (1 + 0.01 * charObj.c.aura_dmg));
-            charObj.c.hit = Math.floor(charObj.c.hit * (1 + 0.01 * charObj.c.aura_hit));
-            charObj.c.dodge = Math.floor(charObj.c.dodge * (1 + 0.01 * charObj.c.aura_dodge));
-            charObj.c.fireOfRate = Math.floor(charObj.c.fireOfRate * (1 + 0.01 * charObj.c.aura_fireOfRate));
-            charObj.c.criRate = Math.floor(charObj.c.criRate * (1 + 0.01 * charObj.c.aura_criRate));
+            charObj.c.dmg = charObj.c.dmg * (1 + 0.01 * charObj.c.aura_dmg);
+            charObj.c.hit = charObj.c.hit * (1 + 0.01 * charObj.c.aura_hit);
+            charObj.c.dodge = charObj.c.dodge * (1 + 0.01 * charObj.c.aura_dodge);
+            charObj.c.fireOfRate = charObj.c.fireOfRate * (1 + 0.01 * charObj.c.aura_fireOfRate);
+            charObj.c.criRate = charObj.c.criRate * (1 + 0.01 * charObj.c.aura_criRate);
             charObj.c.cooldownTimeReduction = Math.min(30, charObj.c.aura_cooldownTime);
-            charObj.c.armor = Math.floor(charObj.c.armor * (1 + 0.01 * charObj.c.aura_armor));
+            charObj.c.armor = charObj.c.armor * (1 + 0.01 * charObj.c.aura_armor);
         }
     }
 }
