@@ -4091,13 +4091,13 @@
         "ammoCount":"4",
         "armor":{"1":"3", "100":"22"},
         "skill":{
-            "name":"堅壁理論",
+            "name":"Theory of Fortification",
             "type":"buff",
             "target":"ally",
             "firstCooldownTime":"2",
             "cooldownTime":{"1":"12", "10": "8"},
             "detailText":{
-                "val":"給戰鬥中位於第一排的我方人形增加能吸收{0}點傷害的護盾<br>持續{1}秒。"
+                "val":"Grants a shield to all T-dolls on the front row that can take a total of {0} damage for {1} seconds."
                 },
             "effect":{
                 "shield":{"1":"12", "10":"35"},
