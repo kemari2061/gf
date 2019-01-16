@@ -1504,7 +1504,7 @@ function updatePerformance() {
             cp.find(".value").html("-").end()
             .find(".value.name").html(charObj.name).css('color', mColors[index - 1]).end()
             .find(".value.hp").html(charObj.cb.hp).end()
-            .find(".value.dmg").html(charObj.cb.attr.dmg).end()
+            .find(".value.dmg").html(charObj.cb.attr.displayDmg).end()
             .find(".value.hit").html(charObj.cb.attr.hit).end()
             .find(".value.dodge").html(charObj.cb.attr.dodge).end()
             .find(".value.fireOfRate").html(charObj.cb.attr.fireOfRate).end()
@@ -2762,6 +2762,7 @@ function updateAttrBeforAction(charObj) {
     });
 
 //    charObj.cb.attr.dmg = Math.floor(charObj.cb.attr.dmg);
+    charObj.cb.attr.displayDmg = Math.floor(charObj.cb.attr.dmg);
     charObj.cb.attr.hit = Math.max(1, Math.floor(charObj.cb.attr.hit));
     charObj.cb.attr.dodge = Math.floor(charObj.cb.attr.dodge);
     charObj.cb.attr.fireOfRate = Math.floor(charObj.cb.attr.fireOfRate);
