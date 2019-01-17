@@ -2217,6 +2217,18 @@ function updateCharObsForUseSkill() {
                     charObj.cb.skillAttack += attackMultiplyExtra;
                 }
 
+                /*
+                if ('radius' in charObj.skill) {
+                    var enemyCount = $('.battle_control .enemyCount').val();
+                    if ($.isNumeric(enemyCount)) {
+                        enemyCount = parseInt(enemyCount);
+                    } else {
+                        enemyCount = 1;
+                    }
+                    charObj.cb.skillAttack *= enemyCount;
+                }
+                */
+
                 if (charObj.id == "183") {
                     useSkillForCalculateBattle(charObj, ally, enemy);
                 }
@@ -2913,6 +2925,13 @@ function calculateActionDmg(charObj, enemy, mode) {
         charObj.cb.attr.dps = charObj.cb.attr.dmg_single * attackTimesPerSecond;
         charObj.cb.skillAttack = charObj.cb.skillAttack * charObj.cb.attr.dmg * enemy.cb.attr.reducedDamage;
         if ('radius' in charObj.skill) {
+            var enemyCount = $('.battle_control .enemyCount').val();
+            if ($.isNumeric(enemyCount)) {
+                enemyCount = parseInt(enemyCount);
+            } else {
+                enemyCount = 1;
+            }
+            charObj.cb.skillAttack *= enemyCount;
         } else {
             charObj.cb.skillAttack *= link;
         }
@@ -3397,11 +3416,15 @@ function battleSimulation(endTime, walkTime, ally, enemy, isSimulation) {
                         if (mDmgLinkMode == MULTI_LINK) {
                             link = charObj.c.link;
                         }
+
+                        let radiusMultiplier = 1;
+
                         if ('radius' in charObj.skill) {
                             link = 1;
+                            radiusMultiplier = enemyCount;
                         }
 
-                        harmThisFrame += parseInt(charObj.cb.attr.dmg * attackMultiply * link * enemy.cb.attr.reducedDamage);
+                        harmThisFrame += parseInt(charObj.cb.attr.dmg * attackMultiply * link * enemy.cb.attr.reducedDamage * radiusMultiplier);
 
                         if ('skillTimes' in charObj.skill && charObj.cb.skillUsedTimes < charObj.skill.skillTimes) {
                             charObj.cb.actionType = PREPARE_TO_USE_SKILL;
