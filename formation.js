@@ -1,4 +1,4 @@
-﻿
+
 const TYPES = ["hg", "smg", "ar", "rf", "mg", "sg"];
 const GRIDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const SKILL_TYPE_IS_PERCENT = ["hit", "dodge", "armor", "fireOfRate", "dmg", "criRate", "cooldownTime", "criDmg", "movementSpeed", "rate", "reducedDamage"];
@@ -1694,7 +1694,7 @@ function setEquipment(grid) {
 		charObj.equipment[3] = (battleisNight?16:8);
 	}
 
-	if (charObj.name == "競爭者") {
+	if (charObj.name == "Contender") {
 		charObj.equipment[2] = 20;
 	}
 	if (charObj.name == "C-MS") {
@@ -1715,13 +1715,13 @@ function setEquipment(grid) {
 	if (charObj.name == "Kar98k") {
 		charObj.equipment[2] = 105;
 	}
-	if (charObj.name == "春田") {
+	if (charObj.name == "Springfield") {
 		charObj.equipment[1] = 59;
 	}
-	if (charObj.name == "莫辛-納甘") {
+	if (charObj.name == "Mosin-Nagant") {
 		charObj.equipment[3] = 86;
 	}
-	if (charObj.name == "莫辛-納甘" && charObj.mod) {
+	if (charObj.name == "Mosin-Nagant" && charObj.mod) {
 		charObj.equipment[3] = 86;
 		charObj.equipment[2] = 111;
 	}
@@ -1735,7 +1735,7 @@ function setEquipment(grid) {
 	/*if (charObj.name == "MG3") {
 		charObj.equipment[3] = 107;
 	}*/
-	if (charObj.name == "阿梅利") {
+	if (charObj.name == "Ameli") {
 		charObj.equipment[3] = 94;
 	}
 	if (charObj.name == "M4A1" && charObj.mod) {
@@ -1764,7 +1764,7 @@ function setEquipment(grid) {
 		charObj.equipment[3] = 32;
 	}
 	
-	if (charObj.name == "56-1式") {
+	if (charObj.name == "Type56-1") {
 		charObj.equipment[1] = (battleisNight?16:85);
 	}
 	if (charObj.name == "9A-91") {
@@ -1774,7 +1774,7 @@ function setEquipment(grid) {
 		charObj.equipment[1] = (battleisNight?16:85);
 	}
 
-	if (charObj.name == "納甘左輪" && charObj.mod) {
+	if (charObj.name == "Nagant M1895" && charObj.mod) {
 		if ((grid == 7) || (grid == 4) || (grid == 1)) {
 			charObj.equipment[1] = (battleisNight?16:113);
 		} else {
@@ -1784,7 +1784,7 @@ function setEquipment(grid) {
 	if (charObj.name == "FN-49" && charObj.mod) {
 		charObj.equipment[2] = 104;
 	}
-	if (charObj.name == "64式" && charObj.mod) {
+	if (charObj.name == "Type64" && charObj.mod) {
 		charObj.equipment[3] = 103;
 	}
 	if (charObj.name == "M1911" && charObj.mod) {
