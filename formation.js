@@ -1,4 +1,4 @@
-
+﻿
 const TYPES = ["hg", "smg", "ar", "rf", "mg", "sg"];
 const GRIDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const SKILL_TYPE_IS_PERCENT = ["hit", "dodge", "armor", "fireOfRate", "dmg", "criRate", "cooldownTime", "criDmg", "movementSpeed", "rate", "reducedDamage"];
@@ -863,9 +863,17 @@ function updatePickerByType(type, auraAttr) {
 
             var name = v.displayName ? v.displayName : v.name;
 
-            var innerText = $('<p></p>').addClass(innerClass).html(name).attr("value", v.id);
+            // Add unit tile buffs to button, if applicable
+            if (auraAttr != null) {
+                var effect = v.aura.effect[auraAttr];
+                var effectStrength = effect["5"] ? effect["5"] : (effect["0"] ? effect["0"] : effect["1"]);
+                var tileBuffLabel = $('<span></span>').addClass('pick_button_buff_number').html(effectStrength + '% x' + v.aura.grid.length);
+                item.append(tileBuffLabel);
+            }
 
-            item.prepend(innerText);
+            // Add unit name to button
+            var innerText = $('<span></span>').addClass(innerClass).html(name).attr("value", v.id);
+            item.append(innerText);
 
             item.css('background-image', 'url("assets/buttons/' + parseInt(v.id) + '.png")');
 

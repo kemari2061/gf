@@ -478,13 +478,51 @@ body {
 
 .pick_button_inner_text {
     position: relative;
-    top: -16px;
+    top: 0px;
     right: 10px;
     line-height: 22px;
 }
 
 .pick_button_inner_text.unreleased {
     color: #FF0000;
+}
+
+.pick_button_buff_number {
+    text-align: left;
+    color: #000000;
+    float: left;
+    position: relative;
+    left: 10px;
+    top: 24px;
+    font-size: 10px;
+    line-height: 22px;
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #FFFFFF,
+         0px -1px 0px #FFFFFF,
+         1px -1px 0px #FFFFFF,
+        -1px  0px 0px #FFFFFF,
+         1px  0px 0px #FFFFFF,
+        -1px  1px 0px #FFFFFF,
+         0px  1px 0px #FFFFFF,
+         1px  1px 0px #FFFFFF,
+        /* second layer at 2px */
+        -2px -2px 1px #FFFFFF,
+        -1px -2px 1px #FFFFFF,
+         0px -2px 1px #FFFFFF,
+         1px -2px 1px #FFFFFF,
+         2px -2px 1px #FFFFFF,
+         2px -1px 1px #FFFFFF,
+         2px  0px 1px #FFFFFF,
+         2px  1px 1px #FFFFFF,
+         2px  2px 1px #FFFFFF,
+         1px  2px 1px #FFFFFF,
+         0px  2px 1px #FFFFFF,
+        -1px  2px 1px #FFFFFF,
+        -2px  2px 1px #FFFFFF,
+        -2px  1px 1px #FFFFFF,
+        -2px  0px 1px #FFFFFF,
+        -2px -1px 1px #FFFFFF;
 }
 
 .pick_button.battle {
