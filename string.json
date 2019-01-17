@@ -38,6 +38,7 @@
     "skillTimes":"for {0}s",
     "prepareTime":"After aiming for {0}s, shoot target for ",
     "self_aura_grid":"Guns located on her tiles ",
+    "self_and_aura_grid":"Self and guns located on her tiles ",
     "cooldownTimeAura":"Reduce Skill CD by ",
     "everyAttackTimesOnNext":"After every {0} hits，the next hit will inflict ",
     "everyChangeAmmoCount":"After each reload ",

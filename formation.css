@@ -315,22 +315,176 @@ body {
 
 .pick_button.rarity_extra {
     background:#DFB6FF;
-}
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #DFB6FF,
+         0px -1px 0px #DFB6FF,
+         1px -1px 0px #DFB6FF,
+        -1px  0px 0px #DFB6FF,
+         1px  0px 0px #DFB6FF,
+        -1px  1px 0px #DFB6FF,
+         0px  1px 0px #DFB6FF,
+         1px  1px 0px #DFB6FF,
+        /* second layer at 2px */
+        -2px -2px 1px #DFB6FF,
+        -1px -2px 1px #DFB6FF,
+         0px -2px 1px #DFB6FF,
+         1px -2px 1px #DFB6FF,
+         2px -2px 1px #DFB6FF,
+         2px -1px 1px #DFB6FF,
+         2px  0px 1px #DFB6FF,
+         2px  1px 1px #DFB6FF,
+         2px  2px 1px #DFB6FF,
+         1px  2px 1px #DFB6FF,
+         0px  2px 1px #DFB6FF,
+        -1px  2px 1px #DFB6FF,
+        -2px  2px 1px #DFB6FF,
+        -2px  1px 1px #DFB6FF,
+        -2px  0px 1px #DFB6FF,
+        -2px -1px 1px #DFB6FF;
+    }
 
 .pick_button.rarity_5 {
     background:#FFB400;
-}
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #FFB400,
+         0px -1px 0px #FFB400,
+         1px -1px 0px #FFB400,
+        -1px  0px 0px #FFB400,
+         1px  0px 0px #FFB400,
+        -1px  1px 0px #FFB400,
+         0px  1px 0px #FFB400,
+         1px  1px 0px #FFB400,
+        /* second layer at 2px */
+        -2px -2px 1px #FFB400,
+        -1px -2px 1px #FFB400,
+         0px -2px 1px #FFB400,
+         1px -2px 1px #FFB400,
+         2px -2px 1px #FFB400,
+         2px -1px 1px #FFB400,
+         2px  0px 1px #FFB400,
+         2px  1px 1px #FFB400,
+         2px  2px 1px #FFB400,
+         1px  2px 1px #FFB400,
+         0px  2px 1px #FFB400,
+        -1px  2px 1px #FFB400,
+        -2px  2px 1px #FFB400,
+        -2px  1px 1px #FFB400,
+        -2px  0px 1px #FFB400,
+        -2px -1px 1px #FFB400;
+    }
 
 .pick_button.rarity_4 {
     background:#D2E05C;
-}
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #D2E05C,
+         0px -1px 0px #D2E05C,
+         1px -1px 0px #D2E05C,
+        -1px  0px 0px #D2E05C,
+         1px  0px 0px #D2E05C,
+        -1px  1px 0px #D2E05C,
+         0px  1px 0px #D2E05C,
+         1px  1px 0px #D2E05C,
+        /* second layer at 2px */
+        -2px -2px 1px #D2E05C,
+        -1px -2px 1px #D2E05C,
+         0px -2px 1px #D2E05C,
+         1px -2px 1px #D2E05C,
+         2px -2px 1px #D2E05C,
+         2px -1px 1px #D2E05C,
+         2px  0px 1px #D2E05C,
+         2px  1px 1px #D2E05C,
+         2px  2px 1px #D2E05C,
+         1px  2px 1px #D2E05C,
+         0px  2px 1px #D2E05C,
+        -1px  2px 1px #D2E05C,
+        -2px  2px 1px #D2E05C,
+        -2px  1px 1px #D2E05C,
+        -2px  0px 1px #D2E05C,
+        -2px -1px 1px #D2E05C;
+    }
 
 .pick_button.rarity_3 {
     background:#6FDDCB;
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #6FDDCB,
+         0px -1px 0px #6FDDCB,
+         1px -1px 0px #6FDDCB,
+        -1px  0px 0px #6FDDCB,
+         1px  0px 0px #6FDDCB,
+        -1px  1px 0px #6FDDCB,
+         0px  1px 0px #6FDDCB,
+         1px  1px 0px #6FDDCB,
+        /* second layer at 2px */
+        -2px -2px 1px #6FDDCB,
+        -1px -2px 1px #6FDDCB,
+         0px -2px 1px #6FDDCB,
+         1px -2px 1px #6FDDCB,
+         2px -2px 1px #6FDDCB,
+         2px -1px 1px #6FDDCB,
+         2px  0px 1px #6FDDCB,
+         2px  1px 1px #6FDDCB,
+         2px  2px 1px #6FDDCB,
+         1px  2px 1px #6FDDCB,
+         0px  2px 1px #6FDDCB,
+        -1px  2px 1px #6FDDCB,
+        -2px  2px 1px #6FDDCB,
+        -2px  1px 1px #6FDDCB,
+        -2px  0px 1px #6FDDCB,
+        -2px -1px 1px #6FDDCB;
 }
 
 .pick_button.rarity_2 {
     background:#BEDEC7;
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #BEDEC7,
+         0px -1px 0px #BEDEC7,
+         1px -1px 0px #BEDEC7,
+        -1px  0px 0px #BEDEC7,
+         1px  0px 0px #BEDEC7,
+        -1px  1px 0px #BEDEC7,
+         0px  1px 0px #BEDEC7,
+         1px  1px 0px #BEDEC7,
+        /* second layer at 2px */
+        -2px -2px 1px #BEDEC7,
+        -1px -2px 1px #BEDEC7,
+         0px -2px 1px #BEDEC7,
+         1px -2px 1px #BEDEC7,
+         2px -2px 1px #BEDEC7,
+         2px -1px 1px #BEDEC7,
+         2px  0px 1px #BEDEC7,
+         2px  1px 1px #BEDEC7,
+         2px  2px 1px #BEDEC7,
+         1px  2px 1px #BEDEC7,
+         0px  2px 1px #BEDEC7,
+        -1px  2px 1px #BEDEC7,
+        -2px  2px 1px #BEDEC7,
+        -2px  1px 1px #BEDEC7,
+        -2px  0px 1px #BEDEC7,
+        -2px -1px 1px #BEDEC7;
+}
+
+.pick_button.unit_background {
+    height: 45px;
+    text-align: right;
+    background-size: 150px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.pick_button_inner_text {
+    position: relative;
+    top: -16px;
+    right: 10px;
+    line-height: 22px;
+}
+
+.pick_button_inner_text.unreleased {
+    color: #FF0000;
 }
 
 .pick_button.battle {
@@ -351,7 +505,7 @@ body {
 
 .pick_button.extra {
     box-shadow:15px 0px 0px 0px #DFB6FF inset;
-}
+    }
 
 .button.extra {
     box-shadow:15px 0px 0px 0px #DFB6FF inset;

@@ -852,13 +852,28 @@ function updatePickerByType(type, auraAttr) {
             return result;
         });
         grepList.forEach(function(v) {
-            var buttonClass = "pick_button hover rarity_"+nowVal;
-            if (isUnreleased(v.id)) {
-                buttonClass += " " + UNRELEASED;
+            var buttonClass = "pick_button hover unit_background rarity_"+nowVal;
+            var innerClass = "pick_button_inner_text";
+            if (v.isUnreleased) {
+                innerClass += " " + UNRELEASED;
             }
-            var item = $('<div></div>').addClass(buttonClass).html(v.name).attr("value", v.id).click(function() {
-                addChar(mPickerGrid, $(this).attr("value"));
+            var item = $('<div></div>').addClass(buttonClass).click(function() {
+                addChar(mPickerGrid, v.id);
             });
+
+            var name = v.displayName ? v.displayName : v.name;
+
+            var innerText = $('<p></p>').addClass(innerClass).html(name).attr("value", v.id);
+
+            item.prepend(innerText);
+
+            item.css('background-image', 'url("assets/buttons/' + parseInt(v.id) + '.png")');
+
+            /*
+            if (v.id == 26) {
+                item.css('background-color', 'white');
+            }
+            */
 
             $('<td></td>').append(item).appendTo(row);
 
@@ -2477,6 +2492,11 @@ function useSkillForCalculateBattle2(obj, ally, enemy, skillEffect, skillUsedBy)
                     var targetGrid = getAuraTargetGrid(charObj);
                     var grepList = $.grep(ally, function(e) {return targetGrid.indexOf(e.c.selfGrid) >= 0;});
                     updateForSkillCalculateBattle(tSkill, grepList, skillEffect.time.val, "buff");
+                } else if (tSkillTarget == "self_and_aura_grid") {
+                    var targetGrid = getAuraTargetGrid(charObj);
+                    var grepList = $.grep(ally, function(e) {return targetGrid.indexOf(e.c.selfGrid) >= 0;});
+                    grepList.push(charObj);
+                    updateForSkillCalculateBattle(tSkill, grepList, skillEffect.time.val, "buff");
                 } else if (tSkillTarget == "self_column_grid") {
                     var targetGrid = getColumnTargetGrid(charObj);
                     var grepList = $.grep(ally, function(e) {return targetGrid.indexOf(e.c.selfGrid) >= 0;});
@@ -2541,6 +2561,11 @@ function useStatEffectForCalculateBattle(user, ally, enemy, effect) {
     if (effect.target == "self_aura_grid") {
         var targetGrid = getAuraTargetGrid(user);
         targets = ally.filter(v => targetGrid.indexOf(v.c.selfGrid) >= 0);
+    }
+    if (effect.target == "self_and_aura_grid") {
+        var targetGrid = getAuraTargetGrid(user);
+        targets = ally.filter(v => targetGrid.indexOf(v.c.selfGrid) >= 0);
+        targers.push(user);
     }
     if (effect.target == "allyInFrontOfMe") {
         var targetGrid = getFrontTargetGrid(user);
@@ -2863,6 +2888,7 @@ function calculateActionDmg(charObj, enemy, mode) {
     if ('everyAttack' in charObj.skill) {
         if ('extraAttack' in charObj.skill.effect) {
             var rate = getSkillAttrValByLevel(charObj, "extraAttack", "rate");
+            //rate = 100 * (1 - Math.pow(1 - (0.01 * rate), charObj.c.link));
             //extraAttack = getCriAttackExpectedValue(100, charObj.cb.attr.criDmg) * rate * 0.01;
             attackList.push(1.5 * rate * 0.01);
         }
