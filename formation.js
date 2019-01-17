@@ -632,6 +632,9 @@ function getSkillDetailNormal(charObj) {
                 } else if (key == "ammoCount") {
                     s += mStringData.addAmmoCount.format(val.val);
                     text.push(s);
+                } else if (key == "targetCount") {
+                    s += mStringData.targetCount.format(val.val);
+                    text.push(s);
                 }
             });
         }
@@ -1512,6 +1515,7 @@ function updatePerformance() {
             .find(".value.criRate").html(charObj.cb.attr.criRate).end()
             .find(".value.criDmg").html(charObj.cb.attr.criDmg + "%").end()
             .find(".value.skillAttack").html(skillAttack).end()
+            .find(".value.targetCount").html(charObj.cb.attr.targetCount).end()
             .find(".value.armorPiercing").html(charObj.c.armorPiercing).end()
             .find(".value.ammoCount").html(charObj.cb.ammoCount).end()
             .find(".value.dps").html(charObj.cb.attr.dps.toFixed(2)).end()
@@ -1861,6 +1865,11 @@ function getChar(id){
         if (obj.type == "rf" || obj.type == "sg") obj[CRI_RATE] = 40;
         if (obj.type == "smg" || obj.type == "mg") obj[CRI_RATE] = 5;
     }
+    if (obj.type == "sg") {
+        obj["targetCount"] = 3;
+    } else {
+        obj["targetCount"] = 1;
+    }
 
     var attackFrameData = findById(mAttackFrameData, id)
     if (attackFrameData) obj["attackFrame"] = attackFrameData.frame;
@@ -1918,9 +1927,11 @@ function updateCharObsForBase2(charObj, grid) {
     charObj.c.link = getLink(charObj.c.level);
     charObj.c.criRate = charObj.criRate;
     charObj.c.criDmg = charObj.criDmg;
+    charObj.c.targetCount = charObj.targetCount;
     charObj.c.movementSpeed = charObj.movementSpeed;
     charObj.c.shield = 0;
     charObj.c.reducedDamage = 1;
+    charObj.c.dmg_multiple = 1;
     if (charObj.type == "mg" || charObj.type == "sg") {
         charObj.c.ammoCount = parseInt(charObj.ammoCount);
     }
@@ -2801,6 +2812,12 @@ function calculateActionDmg(charObj, enemy, mode) {
     var attackList = [];
     var attackNoLinkList = [];
 
+    if ('effect' in charObj.skill && 'targetCount' in charObj.skill.effect && charObj.c.isUseSkill) {
+        charObj.cb.attr.targetCount = getSkillAttrValByLevel(charObj, "targetCount");
+    }
+
+    var targetsHit = charObj.cb.attr.targetCount;
+
     if ('attackTimes' in charObj.cb.attr) {
         attackTimes = charObj.cb.attr.attackTimes;
     }
@@ -2866,12 +2883,15 @@ function calculateActionDmg(charObj, enemy, mode) {
     }
     if (isCanCri) harm *= criAttackE;
     if (!isCertainToHit) harm *= charObj.cb.attr.hitRate;
+    harm *= targetsHit * charObj.cb.attr.dmg_multiple;
     harm = harm * enemy.cb.attr.reducedDamage * link * attackTimes;
+
     harm += attackNoLinkList.filter(v => v > 0).map(v => {
         v *= charObj.cb.attr.dmg;
         v = Math.max(1, v + Math.min(2, charObj.c.armorPiercing - enemy.cb.attr.armor));
         v *= criAttackE;
         v *= charObj.cb.attr.hitRate;
+        v *= targetsHit;
         return v * enemy.cb.attr.reducedDamage;
     }).reduce((t, v) => t + v, 0);
     harm += attackList.filter(v => v > 0).map(v => {
@@ -2879,9 +2899,12 @@ function calculateActionDmg(charObj, enemy, mode) {
         v = Math.max(1, v + Math.min(2, charObj.c.armorPiercing - enemy.cb.attr.armor));
         v *= criAttackE;
         v *= charObj.cb.attr.hitRate;
+        v *= targetsHit;
         return v * enemy.cb.attr.reducedDamage * link;
     }).reduce((t, v) => t + v, 0);
+
     charObj.cb.attr.dmg_single = harm;
+
     if (mode == ACTION) {
         charObj.cb.attr.dmg_frame = charObj.cb.attr.dmg_single;
     } else if (mode == PERFORMANCE) {

@@ -46,6 +46,7 @@
     "rate":" there is a {0}% chance of",
     "criAttack":"always crits",
     "addAmmoCount":"Increase Ammo count by {0} for the current salvo",
+    "targetCount":"Attack will hit {0} targets.",
     "singleLink":"Single Link",
     "multiLink":"Multi Link",
     "last_update":"Last update ",

@@ -260,25 +260,25 @@
     {"id":"77", "name":"BK Slug", "type":"shotgun_bullet", "rarity":"2", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
-            "dmg_multiple":{"min": "3", "max":"3"},
+            "dmg_multiple":{"min": "2", "max":"2"},
             "hit":{"min": "1", "max":"2"}
         }},
     {"id":"78", "name":"FST Slug", "type":"shotgun_bullet", "rarity":"3", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
-            "dmg_multiple":{"min": "3", "max":"3"},
+            "dmg_multiple":{"min": "2", "max":"2"},
             "hit":{"min": "3", "max":"4"}
         }},
     {"id":"79", "name":"WAD Slug", "type":"shotgun_bullet", "rarity":"4", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
-            "dmg_multiple":{"min": "3", "max":"3"},
+            "dmg_multiple":{"min": "2", "max":"2"},
             "hit":{"min": "5", "max":"7"}
         }},
     {"id":"80", "name":"SABOT Slug", "type":"shotgun_bullet", "rarity":"5", "strengthenCoefficient":"0.07",
         "effect":{
             "targetCount":{"min": "-2", "max":"-2"},
-            "dmg_multiple":{"min": "3", "max":"3"},
+            "dmg_multiple":{"min": "2", "max":"2"},
             "hit":{"min": "8", "max":"12"}
         }},
     {"id":"81", "name":"16Lab Armor Plate", "type":"bulletproof_board", "rarity":"5", "strengthenCoefficient":"0.04",

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Noto Sans';
+    font-family: 'Pathway Gothic One';
 }
 
 .hover {
@@ -136,7 +136,7 @@ body {
 
 .char_performance {
     width:195px;
-    height:380px;
+    height:400px;
     float:left;
     margin:5px 3px 0px 0px;
     border-radius:8px;
@@ -149,7 +149,6 @@ body {
     width:90px;
     margin:0px 0px 5px 0px;
     text-align:center;
-    font-weight:bold;
     color:#33a;
     float:left;
 }
@@ -159,7 +158,6 @@ body {
     width:90px;
     margin:0px 0px 5px 0px;
     text-align:center;
-    font-weight:bold;
     float:left;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -182,7 +180,6 @@ body {
     line-height:30px;
     margin:0px 0px 5px 0px;
     text-align:center;
-    font-weight:bold;
     color:#33a;
     float:left;
 }
@@ -193,7 +190,6 @@ body {
     line-height:30px;
     margin:0px 0px 5px 0px;
     text-align:center;
-    font-weight:bold;
     float:left;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -414,7 +410,6 @@ body {
     line-height:30px;
     margin:0px 0px 5px 0px;
     text-align:center;
-    font-weight:bold;
     color:#33a;
     float:left;
 }
@@ -425,7 +420,6 @@ body {
     line-height:30px;
     margin:0px 0px 5px 0px;
     text-align:center;
-    font-weight:bold;
     float:left;
     overflow:hidden;
     text-overflow:ellipsis;
