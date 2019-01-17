@@ -1,4 +1,5 @@
 {"update":[
+    {"date": "Thu Jan 17 12:00:00 2019 +0100", "log": ["Fixed special equipment not being defaulted correctly for some units."]},
     {"date": "Wed Jan 16 23:00:00 2019 +0100", "log": ["Shotguns and AoE skills now properly do extra damage based on Enemy Count."]},
     {"date": "Wed Jan 16 20:00:00 2019 +0100", "log": ["Forked. TL/CSS updates. Fixed RoF rounding issue that gave incorrect output."]},
     {"date": "Sat Oct 27 11:00:00 2018 +0100", "log": ["Fixed some styling, new feature: copy button for formation code/url"]},
