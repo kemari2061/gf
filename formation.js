@@ -1892,6 +1892,13 @@ function updateCharObsForBase() {
 }
 
 function updateCharObsForBase2(charObj, grid) {
+    var enemyCount = $('.battle_control .enemyCount').val();
+    if ($.isNumeric(enemyCount)) {
+        enemyCount = parseInt(enemyCount);
+    } else {
+        enemyCount = 1;
+    }
+
     charObj.ui = {};
     charObj.ui.controlUI = gridToUi(grid, CONTROL_CONTAINER);
     charObj.ui.equipmentUI = gridToUi(grid, EQUIPMENT_CONTAINER);
@@ -1927,7 +1934,7 @@ function updateCharObsForBase2(charObj, grid) {
     charObj.c.link = getLink(charObj.c.level);
     charObj.c.criRate = charObj.criRate;
     charObj.c.criDmg = charObj.criDmg;
-    charObj.c.targetCount = charObj.targetCount;
+    charObj.c.targetCount = Math.min(enemyCount, charObj.targetCount);
     charObj.c.movementSpeed = charObj.movementSpeed;
     charObj.c.shield = 0;
     charObj.c.reducedDamage = 1;
@@ -2815,6 +2822,13 @@ function getCriAttackExpectedValue(criRate, criDmg) {
 }
 
 function calculateActionDmg(charObj, enemy, mode) {
+    var enemyCount = $('.battle_control .enemyCount').val();
+    if ($.isNumeric(enemyCount)) {
+        enemyCount = parseInt(enemyCount);
+    } else {
+        enemyCount = 1;
+    }
+
     var isCanCri = true;
     var attackMultiplyWithLinks = 1.0;
     var link = 1;
@@ -2825,7 +2839,7 @@ function calculateActionDmg(charObj, enemy, mode) {
     var attackNoLinkList = [];
 
     if ('effect' in charObj.skill && 'targetCount' in charObj.skill.effect && charObj.c.isUseSkill) {
-        charObj.cb.attr.targetCount = getSkillAttrValByLevel(charObj, "targetCount");
+        charObj.cb.attr.targetCount = Math.min(enemyCount, getSkillAttrValByLevel(charObj, "targetCount"));
     }
 
     var targetsHit = charObj.cb.attr.targetCount;
