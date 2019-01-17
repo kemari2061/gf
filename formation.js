@@ -863,11 +863,18 @@ function updatePickerByType(type, auraAttr) {
 
             var name = v.displayName ? v.displayName : v.name;
 
+
             // Add unit tile buffs to button, if applicable
             if (auraAttr != null) {
                 var effect = v.aura.effect[auraAttr];
                 var effectStrength = effect["5"] ? effect["5"] : (effect["0"] ? effect["0"] : effect["1"]);
                 var tileBuffLabel = $('<span></span>').addClass('pick_button_buff_number').html(effectStrength + '% x' + v.aura.grid.length);
+                var buffGrid = $('.factory .aura_container').clone();
+                buffGrid.addClass('aura_container_small')
+                buffGrid.find('.aura').addClass('aura_small').removeClass('aura');
+                updateAuraUI(buffGrid, v);
+
+                item.append(buffGrid);
                 item.append(tileBuffLabel);
             }
 

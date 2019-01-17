@@ -492,7 +492,7 @@ body {
     color: #000000;
     float: left;
     position: relative;
-    left: 10px;
+    left: -8px;
     top: 24px;
     font-size: 10px;
     line-height: 22px;
@@ -523,6 +523,18 @@ body {
         -2px  1px 1px #FFFFFF,
         -2px  0px 1px #FFFFFF,
         -2px -1px 1px #FFFFFF;
+}
+
+.aura_container_small {
+    float:left;
+    position:relative;
+    left:6px;
+    top:6px;
+}
+
+.aura_small {
+    width:2px;
+    height:5px;
 }
 
 .pick_button.battle {
