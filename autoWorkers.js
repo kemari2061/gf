@@ -21,7 +21,7 @@ var $ = function(input) {
 		
 		if (input == ".battle_control .enemyDodge") {
 			return { 
-					val: function(){ return (_dodgeEnemy?"81":"10"); } 
+					val: function(){ return (_dodgeEnemy?"81":"15"); } 
 				   }; 
 		} else if (input == ".battle_control .enemyArmor") {
 			return { 
