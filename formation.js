@@ -1117,11 +1117,11 @@ function addChar(grid, id) {
         $("." + mGridToUI[grid] + " .char .skill_effect").hide();
     }
     if (skillType == "passive" || skillType == "battleStart") {
-        $("." + mGridToUI[grid] + " .char .skill_control").prop("disabled", true);
         $("." + mGridToUI[grid] + " .char .skill_control").prop("checked", true);
+        $("." + mGridToUI[grid] + " .char .skill_control").prop("disabled", true);
     } else {
+        $("." + mGridToUI[grid] + " .char .skill_control").prop("checked", true);
         $("." + mGridToUI[grid] + " .char .skill_control").prop("disabled", false);
-        $("." + mGridToUI[grid] + " .char .skill_control").prop("checked", false);
         $(".skill_all").prop("checked", false);
 
         if ('stack' in mGridToChar[grid].skill && mGridToChar[grid].skill.stack > 0) {
