@@ -307,10 +307,14 @@ body {
     line-height:28px;
     margin:10px 0px;
     border-radius:10px;
-    text-align:center;
+    text-align:right;
     background:#cde;
     border:1px outset #ace;
     float:left;
+	
+	background-size: 40px;
+    background-position: left center;
+    background-repeat: no-repeat;
 }
 
 .pick_button.rarity_extra {

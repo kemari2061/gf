@@ -1258,10 +1258,12 @@ function updateEquipmentUI(charObj) {
         var ii = i*1 + 1;
         if (charLevel >= CHAR_LEVEL_EQUIPMENT[i]) {
             var text = mStringData[classificationList[ii]];
+			var image = mStringData[classificationList[ii]];
             if (charObj.equipment[ii] != "") {
                 text = getEquipmentById(charObj.equipment[ii]).name;
+				image = getEquipmentById(charObj.equipment[ii]).equipIcon;
             }
-            charObj.ui.equipmentUI.find(".equipment_"+ii).html(text).click(function() {
+            charObj.ui.equipmentUI.find(".equipment_"+ii).html(text).css('background-image', 'url("assets/equipButtons/' + image + '.png")').addClass("button equipped_background").click(function() {
                 openDialogPickerEquipment($(this).attr("equipment_index"), $(this).attr("grid_value"));
             });
         } else {
