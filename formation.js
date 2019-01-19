@@ -921,13 +921,19 @@ function updatePickerFairy() {
         });
         var items = [];
         grepList.forEach(function(v) {
-            var buttonClass = "pick_button hover "+FAIRY_TYPE[i];
+            var buttonClass = "pick_button hover fairy_background "+FAIRY_TYPE[i];
+			var innerClass = "pick_button_inner_text";
+            // Add unit-fairy name to button
+            var innerText = $('<span></span>').addClass(innerClass).html(v.name);
+            
+			
             if (isFairyExtra(v.id)) {
                 buttonClass += " " + EXTRA;
             }
-            var item = $('<div></div>').addClass(buttonClass).html(v.name).attr("value", v.id).click(function() {
+            var item = $('<div></div>').addClass(buttonClass).append(innerText).attr("value", v.id).click(function() {
                 addFairy($(this).attr("value"));
             });
+			item.css('background-image', 'url("assets/fairyButtons/' + parseInt(v.id) + '.png")');
             items.push(item);
         });
 
@@ -964,9 +970,16 @@ function addFairy(id) {
 
     $(".fairy_container .select_fairy").hide();
     $(".fairy_container .fairy_control_container").show();
-    $(".fairy_container .fairy_control_container .fairy").html(mFairy.name);
+	
+    // Add unit name to button
+    var innerText = $('<span></span>').addClass("pick_button_inner_text").html(mFairy.name);
+    $(".fairy_container .fairy_control_container .fairy").html(innerText);
+	
     $(".fairy_container .fairy_control_container .fairy").removeClass(FAIRY_TYPE.join(" ") + " " + EXTRA);
     $(".fairy_container .fairy_control_container .fairy").addClass(mFairy.type);
+	
+
+	$(".fairy_container .fairy_control_container .fairy").css('background-image', 'url("assets/fairyButtons/' + mFairy.id + '.png")');
     if (isFairyExtra(id)) {
         $(".fairy_container .fairy_control_container .fairy").addClass(EXTRA);
     }
@@ -1258,10 +1271,12 @@ function updateEquipmentUI(charObj) {
         var ii = i*1 + 1;
         if (charLevel >= CHAR_LEVEL_EQUIPMENT[i]) {
             var text = mStringData[classificationList[ii]];
+			var image = mStringData[classificationList[ii]];
             if (charObj.equipment[ii] != "") {
                 text = getEquipmentById(charObj.equipment[ii]).name;
+				image = getEquipmentById(charObj.equipment[ii]).equipIcon;
             }
-            charObj.ui.equipmentUI.find(".equipment_"+ii).html(text).click(function() {
+            charObj.ui.equipmentUI.find(".equipment_"+ii).html(text).css('background-image', 'url("assets/equipButtons/' + image + '.png")').addClass("button equipped_background").click(function() {
                 openDialogPickerEquipment($(this).attr("equipment_index"), $(this).attr("grid_value"));
             });
         } else {

@@ -307,10 +307,14 @@ body {
     line-height:28px;
     margin:10px 0px;
     border-radius:10px;
-    text-align:center;
+    text-align:right;
     background:#cde;
     border:1px outset #ace;
     float:left;
+	
+	background-size: 40px;
+    background-position: left center;
+    background-repeat: no-repeat;
 }
 
 .pick_button.rarity_extra {
@@ -476,6 +480,81 @@ body {
     background-repeat: no-repeat;
 }
 
+.pick_button.battle.fairy_background {
+    height: 30px;
+	width: 170px;
+    text-align: right;
+    background-size: 100px;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #FF6A38,
+         0px -1px 0px #FF6A38,
+         1px -1px 0px #FF6A38,
+        -1px  0px 0px #FF6A38,
+         1px  0px 0px #FF6A38,
+        -1px  1px 0px #FF6A38,
+         0px  1px 0px #FF6A38,
+         1px  1px 0px #FF6A38,
+        /* second layer at 2px */
+        -2px -2px 1px #FF6A38,
+        -1px -2px 1px #FF6A38,
+         0px -2px 1px #FF6A38,
+         1px -2px 1px #FF6A38,
+         2px -2px 1px #FF6A38,
+         2px -1px 1px #FF6A38,
+         2px  0px 1px #FF6A38,
+         2px  1px 1px #FF6A38,
+         2px  2px 1px #FF6A38,
+         1px  2px 1px #FF6A38,
+         0px  2px 1px #FF6A38,
+        -1px  2px 1px #FF6A38,
+        -2px  2px 1px #FF6A38,
+        -2px  1px 1px #FF6A38,
+        -2px  0px 1px #FF6A38,
+        -2px -1px 1px #FF6A38;
+}
+.pick_button.strategy.fairy_background {
+    height: 30px;
+	width: 170px;
+    text-align: right;
+    background-size: 100px;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #7794D8,
+         0px -1px 0px #7794D8,
+         1px -1px 0px #7794D8,
+        -1px  0px 0px #7794D8,
+         1px  0px 0px #7794D8,
+        -1px  1px 0px #7794D8,
+         0px  1px 0px #7794D8,
+         1px  1px 0px #7794D8,
+        /* second layer at 2px */
+        -2px -2px 1px #7794D8,
+        -1px -2px 1px #7794D8,
+         0px -2px 1px #7794D8,
+         1px -2px 1px #7794D8,
+         2px -2px 1px #7794D8,
+         2px -1px 1px #7794D8,
+         2px  0px 1px #7794D8,
+         2px  1px 1px #7794D8,
+         2px  2px 1px #7794D8,
+         1px  2px 1px #7794D8,
+         0px  2px 1px #7794D8,
+        -1px  2px 1px #7794D8,
+        -2px  2px 1px #7794D8,
+        -2px  1px 1px #7794D8,
+        -2px  0px 1px #7794D8,
+        -2px -1px 1px #7794D8;
+}
+
+
+
 .pick_button_inner_text {
     position: relative;
     top: 0px;
@@ -547,10 +626,80 @@ body {
 
 .button.battle {
     background:#FF6A38;
+	
+	height: 30px;
+	width: 170px;
+    text-align: right;
+    background-size: 100px;
+    background-position: left center;
+    background-repeat: no-repeat;
+	
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #FF6A38,
+         0px -1px 0px #FF6A38,
+         1px -1px 0px #FF6A38,
+        -1px  0px 0px #FF6A38,
+         1px  0px 0px #FF6A38,
+        -1px  1px 0px #FF6A38,
+         0px  1px 0px #FF6A38,
+         1px  1px 0px #FF6A38,
+        /* second layer at 2px */
+        -2px -2px 1px #FF6A38,
+        -1px -2px 1px #FF6A38,
+         0px -2px 1px #FF6A38,
+         1px -2px 1px #FF6A38,
+         2px -2px 1px #FF6A38,
+         2px -1px 1px #FF6A38,
+         2px  0px 1px #FF6A38,
+         2px  1px 1px #FF6A38,
+         2px  2px 1px #FF6A38,
+         1px  2px 1px #FF6A38,
+         0px  2px 1px #FF6A38,
+        -1px  2px 1px #FF6A38,
+        -2px  2px 1px #FF6A38,
+        -2px  1px 1px #FF6A38,
+        -2px  0px 1px #FF6A38,
+        -2px -1px 1px #FF6A38;
 }
 
 .button.strategy {
     background:#7794D8;
+	
+	height: 30px;
+	width: 170px;
+    text-align: right;
+    background-size: 100px;
+    background-position: left center;
+    background-repeat: no-repeat;
+	
+    text-shadow: 
+        /* first layer at 1px */
+        -1px -1px 0px #7794D8,
+         0px -1px 0px #7794D8,
+         1px -1px 0px #7794D8,
+        -1px  0px 0px #7794D8,
+         1px  0px 0px #7794D8,
+        -1px  1px 0px #7794D8,
+         0px  1px 0px #7794D8,
+         1px  1px 0px #7794D8,
+        /* second layer at 2px */
+        -2px -2px 1px #7794D8,
+        -1px -2px 1px #7794D8,
+         0px -2px 1px #7794D8,
+         1px -2px 1px #7794D8,
+         2px -2px 1px #7794D8,
+         2px -1px 1px #7794D8,
+         2px  0px 1px #7794D8,
+         2px  1px 1px #7794D8,
+         2px  2px 1px #7794D8,
+         1px  2px 1px #7794D8,
+         0px  2px 1px #7794D8,
+        -1px  2px 1px #7794D8,
+        -2px  2px 1px #7794D8,
+        -2px  1px 1px #7794D8,
+        -2px  0px 1px #7794D8,
+        -2px -1px 1px #7794D8;
 }
 
 .pick_button.extra {
@@ -592,6 +741,8 @@ body {
 .fairy_container .item {
     float:left;
     margin:10px 0px;
+	
+
 }
 
 .fairy_container .item.control {
