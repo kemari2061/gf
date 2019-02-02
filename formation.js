@@ -1,4 +1,4 @@
-﻿
+
 const TYPES = ["hg", "smg", "ar", "rf", "mg", "sg"];
 const GRIDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const SKILL_TYPE_IS_PERCENT = ["hit", "dodge", "armor", "fireOfRate", "dmg", "criRate", "cooldownTime", "criDmg", "movementSpeed", "rate", "reducedDamage"];
@@ -854,6 +854,7 @@ function initDialog() {
     });
     $('#updateDialog').dialog({autoOpen: false, width: 'auto', modal : true});
     $('#updateDialog').dialog({position: {my: "left bottom", at: "left top", of: ".update_log"}});
+    $('#save-hover').dialog({autoOpen: false, position: {my: "left bottom", at: "right top", of: $(this)}, width: 555});
 
     var row = $('<tr></tr>');
     var typeList = copyObject(TYPES);

@@ -11,10 +11,6 @@ body {
     clear:both !important;
 }
 
-.xhidden {
-    display: none;
-}
-
 .panel {
     float:left;
     margin:2px 2px;
@@ -870,7 +866,12 @@ img.save-hover-cell-img {
 .inline {
 	display: inline-block;
 }
+
 a img {
     max-width:25px;
     max-height:25px;
+}
+
+.xhidden {
+    display: none;
 }
