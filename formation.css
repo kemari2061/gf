@@ -114,7 +114,7 @@ body {
 
 .battle_control .battleFortress_container {
     width:80px;
-    height:20px;
+    height:auto;
     line-height:18px;
     float:left;
 	text-align:center;
@@ -208,11 +208,80 @@ body {
 }
 
 .button {
+    display: inline-block; overflow: hidden; 
     width:100px;
     height:30px;
     line-height:28px;
     margin:10px 0px;
     border-radius:10px;
+    text-align:center;
+    background:#cde;
+    border:1px outset #ace;
+}
+
+.row_save_load {
+    height: 36px; 
+}
+
+.save_file_contents {
+    display:inline-block; 
+    vertical-align: top; 
+    line-height: 36px; 
+    padding: 0px 12px;
+}
+
+.save-hover-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+  
+.save-hover-table td {
+    border: 1px solid black;
+    height: 160px;
+    width: 160px;
+    display:inline-block;
+    vertical-align: bottom;
+}
+
+.save-hover-cell-wrapper {
+    height: 160px;
+    width: 160px;
+    position: relative;
+}
+
+.save-hover-cell-level-info {
+    position: absolute; 
+    top: 3px;
+    left: 3px;
+    font-family: 'Pathway Gothic One';
+}
+
+.save-hover-cell-buff-info {
+    position: absolute; 
+    top: 3px;
+    right: 3px;
+}
+
+.save-hover-cell-buff-info td {
+    height: 6px;
+    width: 6px;
+}
+  
+img.save-hover-cell-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.button_compact {
+    display: inline-block; overflow: hidden; 
+    width:50px;
+    height:25px;
+    line-height:24px;
+    margin:6px 0px;
+    border-radius:6px;
     text-align:center;
     background:#cde;
     border:1px outset #ace;
