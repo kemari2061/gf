@@ -303,6 +303,28 @@ img.save-hover-cell-img {
     display: inline-block;
 }
 
+.fairy_preview {
+    width: 490px;
+    height: 100px;
+    border-radius:8px;
+    display: inline-block;
+
+    margin-top: 5px;
+    border:2px outset #ace;
+    background-size: 240px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.fairy_preview_inner_text {
+    position: absolute;
+    text-align: right;
+    top: 4px;
+    right: 10px;
+    line-height: 22px;
+    font-family: 'Homenaje';
+}
+
 .pick_button_hg {
     background-image: url("assets/Icon_HG.png");
 }

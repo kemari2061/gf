@@ -1,4 +1,4 @@
-
+﻿
 const TYPES = ["hg", "smg", "ar", "rf", "mg", "sg"];
 const GRIDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const SKILL_TYPE_IS_PERCENT = ["hit", "dodge", "armor", "fireOfRate", "dmg", "criRate", "cooldownTime", "criDmg", "movementSpeed", "rate", "reducedDamage"];
@@ -139,8 +139,7 @@ function updateHover(contents) {
         $('#save-hover').dialog({
             position: {
                 my: "left bottom", at: "right top", of: $(this)
-            },
-            width: 555
+            }
         });
 
         for (let i = 1; i <= 9; i++) {
@@ -176,6 +175,23 @@ function updateHover(contents) {
             console.log('saveData was null: ' + saveData)
         }
 
+        if (saveData != null && !jQuery.isEmptyObject(saveData["fairy"])) {
+            let fairy = getFairy(saveData.fairy.id);
+            fairy.mastery = getMastery(saveData.fairy.m);
+            let fairy_info =
+            "★".repeat(saveData.fairy.r) + ' ' + fairy.name 
+            + '<br />' + 'Lv: ' + (saveData.fairy.lv)
+            + '<br />' + 'Skill: ' + (saveData.fairy.isUseSkill ? 'On' : 'Off')
+            + '<br />' + '[' + fairy.mastery.name + ']';
+                    
+            var item = $('<div></div>').addClass('fairy_preview hover').append(
+                $('<span></span>').html(fairy_info).addClass('fairy_preview_inner_text')
+            );
+            item.css('background-image', 'url("assets/fairyButtons/' + parseInt(fairy.id) + '.png")');
+            $('.save-hover-fairy-container').html(item);
+        }
+
+
         $('#save-hover').dialog("open");
     }, function(){
         $('#save-hover').dialog("close");
@@ -198,15 +214,26 @@ function getSaveContents(i) {
         return 'None';
     }
 
+    let battleTime = saveData.isNight ? '🌑' : '🌤️';
     let dps = (saveData != null && !jQuery.isEmptyObject(saveData["dps"])) ? saveData.dps.d8sSum : 'undefined';
+    dps = " [DPS 8s: " + dps + "] ";
 
-    return "[DPS 8s: " + dps + "] " + nameArray.join(', ');
+    let fairy = 'No Fairy'
+
+    if (saveData != null && !jQuery.isEmptyObject(saveData["fairy"])) {
+        fairy = getFairy(saveData.fairy.id).name;
+    }
+
+    fairy = ' - ' + fairy;
+
+    return battleTime + dps + nameArray.join(', ') + fairy;
 }
 
 function loadSaveData(saveData) {
     for (let i = 0; i < 9; i++) {
         removeChar(i);
     }
+    removeFairy();
     var preObject = JSON.parse(saveData);
     if (!jQuery.isEmptyObject(preObject["char"])) {
         var formation = preObject["char"];
@@ -232,8 +259,16 @@ function loadSaveData(saveData) {
         fairyControlContainer.find(".rarity").val(preObject["fairy"].r);
         fairyControlContainer.find(".skill_level").val(preObject["fairy"].slv);
         fairyControlContainer.find(".mastery").val(preObject["fairy"].m);
+        fairyControlContainer.find(".skill_control_label").val(preObject["fairy"].isUseSkill);
         addFairy(preObject["fairy"].id);
     }
+
+    // Apply metadata 
+    $('.battleisNight').prop('checked', preObject.isNight);
+    $('.enemyEliteTarget').prop('checked', preObject.enemyEliteTarget || true);
+    $('.enemyDodge').val(preObject.enemyDodge || 15);
+    $('.enemyArmor').val(preObject.enemyArmor || 0);
+    $('.enemyCount').val(preObject.enemyCount || 1);
 }
 
 function generateSaveData() {
@@ -269,6 +304,7 @@ function generateSaveData() {
         fairy.r = mFairy.rarity;
         fairy.slv = mFairy.skillLevel;
         fairy.m = mFairy.mastery.id;
+        fairy.isUseSkill = mFairy.isUseSkill;
     }
     
     preLoadCode["char"] = formation;
@@ -278,7 +314,12 @@ function generateSaveData() {
         d20sSum : $('.value.d20sSum').html()
     };
     preLoadCode["fairy"] = fairy;
-    
+    preLoadCode["isNight"] = $('.battleisNight').prop('checked');
+    preLoadCode["enemyEliteTarget"] = $('.enemyEliteTarget').prop('checked');
+    preLoadCode["enemyDodge"] = $('.enemyDodge').val();
+    preLoadCode["enemyArmor"] = $('.enemyArmor').val();
+    preLoadCode["enemyCount"] = $('.enemyCount').val();
+
     return preLoadCode;
 }
 
@@ -854,7 +895,7 @@ function initDialog() {
     });
     $('#updateDialog').dialog({autoOpen: false, width: 'auto', modal : true});
     $('#updateDialog').dialog({position: {my: "left bottom", at: "left top", of: ".update_log"}});
-    $('#save-hover').dialog({autoOpen: false, position: {my: "left bottom", at: "right top", of: $(this)}, width: 555});
+    $('#save-hover').dialog({autoOpen: false, position: {my: "left bottom", at: "right top", of: $(this)}, width: 535});
 
     var row = $('<tr></tr>');
     var typeList = copyObject(TYPES);
