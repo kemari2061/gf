@@ -1,4 +1,5 @@
 {"update":[
+    {"date": "Sat Feb 09 20:00:00 2019 +0100", "log": ["Added import/export feature. Added delete for saves."]},
     {"date": "Sat Feb 02 18:00:00 2019 +0100", "log": ["Added save/load feature."]},
     {"date": "Tue Jan 29 12:00:00 2019 +0100", "log": ["Fixed passive skills being togglable."]},
     {"date": "Tue Jan 29 11:00:00 2019 +0100", "log": ["Fixed slugs making SGs hit 0 or -1 targets. Default evasion now 15."]},

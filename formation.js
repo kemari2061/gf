@@ -81,12 +81,85 @@ var targetFilter = (v => {
     return true;
 });
 
+function exportSaveData() {
+    let oJson = {};
+    let sKey;
+    for (let i = 0; window.localStorage.key(i) != null; i++) {
+        sKey = window.localStorage.key(i);
+        oJson[sKey] = JSON.parse(window.localStorage.getItem(sKey));
+    }
+    return JSON.stringify(oJson, null, 4);
+}
+
+// Returns number of teams imported
+function importSaveData(jsonText) {
+    localStorage.clear();
+    let oJson = JSON.parse(jsonText);
+    let i = 0;
+    for (let key in oJson) {
+        i++;
+        localStorage.setItem(key, JSON.stringify(oJson[key]));
+    }
+    initSaveRows();
+    return i;
+}
+
+function getStorage(index) {
+    if (typeof(Storage) !== "undefined") {
+        let result = localStorage.getItem("gfl-sim-save-data-" + index);
+        if (result != null) {
+            return JSON.parse(result);
+        } else {
+            return null;
+        }
+    } else {
+        return null;
+    }
+}
+
+function setStorage(index, contents) {
+    if (typeof(Storage) !== "undefined") {
+        if (contents != null) {
+            localStorage.setItem("gfl-sim-save-data-" + index, JSON.stringify(contents));
+        } else {
+            localStorage.removeItem("gfl-sim-save-data-" + index);
+        }
+    } else {
+
+    }
+}
+
+function initSaveRows() {
+    let container = $('.container_save_load');
+    container.html('');
+    let i = 1;
+    do {
+        createNewRow(i);
+        console.log('GetStorage(' + i + ') ' + JSON.stringify(getStorage(i)));
+    } while (getStorage(i++) != null && i < 50);
+}
+
 function createNewRow(i) {
     let container = $('.container_save_load');
     let row = $('<div></div>').addClass('row_save_load');
+    let delButton = $('<span></span>').addClass('button hover button_compact button_del').html('Del').attr('data-index', i);
     let saveButton = $('<span></span>').addClass('button hover button_compact button_save').html('Save').attr('data-index', i);
     let loadButton = $('<span></span>').addClass('button hover button_compact button_load').html('Load').attr('data-index', i);
     let contents = $('<span></span>').addClass('save_file_contents').attr('data-index', i);
+
+    delButton.click(function() {
+        var index = $.parseJSON($(this).attr('data-index'));
+        if (confirm('Are you sure you want to delete save #' + index + "?")) {
+            let incr = index;
+            let nextSave;
+            do {
+                nextSave = getStorage(++incr);
+                setStorage(incr - 1, nextSave);
+            } while (nextSave != null);
+            
+            initSaveRows();
+        }
+    });
 
 
     saveButton.click(function() {
@@ -121,14 +194,14 @@ function createNewRow(i) {
             console.log(saveData);
 
             loadSaveData(saveData);
-          }
+        }
     });
 
     contents.html(getSaveContents(i));
     
     updateHover(contents);
 
-    row.append(saveButton).append(loadButton).append(contents);
+    row.append(delButton).append(saveButton).append(loadButton).append(contents);
     container.append(row);
 }
 
@@ -498,10 +571,7 @@ function init() {
     });
 
 
-    let i = 1;
-    do {
-        createNewRow(i);
-    } while (localStorage.getItem("gfl-sim-save-data-" + i++) != null);
+    initSaveRows();
 
     var pre = getUrlParameter('pre');
     if (pre) {
@@ -645,6 +715,38 @@ function init() {
     $('.last_update_time').html(mStringData["last_update"] + " " + mUpdate[0].date.yyyymmdd());
     $('.update_log').click(function() {
         $('#updateDialog').dialog("open");
+    });
+
+    // Import/Export window button
+    $('.import_export').html("Import/Export");
+    $('.import_export').click(function() {
+        $('#import-export-contents').val(exportSaveData());
+        $('.button_copy_to_clipboard').html("Copy to Clipboard");
+        $('.button_import').html("Import");
+        $('#import-export-hover').dialog("open");
+    });
+
+    // Import/Export window body options
+    $('.button_copy_to_clipboard').click(function() {
+        $('#import-export-contents').select();
+        document.execCommand("copy");
+        $(this).html("Copied to Clipboard!")
+    });
+
+    // Import/Export window body options
+    $('.button_import').click(function() {
+        let backup = exportSaveData();
+        console.log(backup);
+        try {
+            $('#import-export-contents').blur();
+            let importObj = $('#import-export-contents').val();
+            let teamCount = importSaveData(importObj);
+            $(this).html("Imported " + teamCount + " teams!");
+        } catch(err) {
+            alert(err);
+            importSaveData(backup);
+            $(this).html("Import failed!");
+        }
     });
 
     $('.select_fairy').click(function() {
@@ -896,6 +998,7 @@ function initDialog() {
     $('#updateDialog').dialog({autoOpen: false, width: 'auto', modal : true});
     $('#updateDialog').dialog({position: {my: "left bottom", at: "left top", of: ".update_log"}});
     $('#save-hover').dialog({autoOpen: false, position: {my: "left bottom", at: "right top", of: $(this)}, width: 535});
+    $('#import-export-hover').dialog({autoOpen: false, width: 'auto', modal : true});
 
     var row = $('<tr></tr>');
     var typeList = copyObject(TYPES);

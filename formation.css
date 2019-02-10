@@ -283,6 +283,19 @@ img.save-hover-cell-img {
     border:1px outset #ace;
 }
 
+.button_wide {
+    font-family: 'Pathway Gothic One';
+    display: inline-block; overflow: hidden; 
+    width:150px;
+    height:25px;
+    line-height:24px;
+    margin:6px 0px;
+    border-radius:6px;
+    text-align:center;
+    background:#cde;
+    border:1px outset #ace;
+}
+
 .pick_button {
     width:150px;
     height:30px;
