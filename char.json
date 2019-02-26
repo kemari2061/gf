@@ -5529,18 +5529,17 @@
                 "0":"Enter sniper mode for {0} seconds. After every {1} seconds of aiming,<br>deal {2}x damage (able to crit) to the furthest target and decrease<br>their damage by {3}% for 3 seconds.<br><br>Passive: Normal attacks against armorless enemies deal {4}x damage.",
                 "format":[
                     {"effectIndex":1, "attr":"time"}, 
-                    {"effectIndex":4, "attr":"value"},
-                    {"effectIndex":5, "attr":"value"},
                     {"effectIndex":3, "attr":"value"},
+                    {"effectIndex":4, "attr":"value"},
+                    {"effectIndex":2, "attr":"value"},
                     {"effectIndex":0, "attr":"value"}
                     ]},
             "effects":[
                 {"filter":"passive", "value":{"1":1.05, "10":1.05}},
-                {"filter":"active", "type":"buff", "target":"self", "attribute":"attackFrame", "value":{"1":75,"10":60}, "time":{"1":9, "10":9}},
-                {"filter":"active", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":50,"10":100}, "time":{"1":9, "10":9}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"attackFrame", "value":{"1":75,"10":45}, "time":{"1":9, "10":9}},
                 {"filter":"passive", "value":{"1":5, "10":10}},
                 {"filter":"passive", "value":{"1":2.5, "10":2}},
-                {"filter":"passive", "value":{"1":1.5, "10":2}}
+                {"filter":"attackReplace", "buffFilter":"Killing Intent of the Silent", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":true, "value":{"1":1.5, "10":2}, "toFixedCount":2}
             ]},
         "aura":{
             "target":"hg", "effect":{
