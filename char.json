@@ -5538,7 +5538,7 @@
                 {"filter":"passive", "value":{"1":1.05, "10":1.05}},
                 {"filter":"active", "type":"buff", "target":"self", "attribute":"attackFrame", "value":{"1":75,"10":45}, "time":{"1":9, "10":9}},
                 {"filter":"passive", "value":{"1":5, "10":10}},
-                {"filter":"passive", "value":{"1":2.5, "10":1.5}},
+                {"filter":"passive", "value":{"1":2.5, "10":1.5}, "toFixedCount":1},
                 {"filter":"attackReplace", "buffFilter":"Killing Intent of the Silent", "type":"attack", "target":"enemy", "certainToHit":true, "ignoreArmor":true, "canCri":true, "value":{"1":1.5, "10":2}, "toFixedCount":2}
             ]},
         "aura":{
