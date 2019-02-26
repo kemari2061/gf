@@ -3525,7 +3525,7 @@
         "hit":{"1":"9", "100":"78"},
         "fireOfRate":{"1":"21", "100":"32"},
         "skill":{
-            "name":"巨鷹攻勢",
+            "name":"Giant Eagle Assault",
             "type":"buff",
             "target":"self",
             "firstCooldownTime":"6",
@@ -5514,6 +5514,40 @@
             "grid":[
                 {"x":"1", "y":"0"},
                 {"x":"1", "y":"-1"}]}},
+    {"id":"257", "name":"M200", "type":"rf", "rarity":"5",
+        "hp":{"1":44, "100":88},
+        "dmg":{"1":49, "100":145},
+        "hit":{"1":11, "100":96},
+        "dodge":{"1":4, "100":31},
+        "fireOfRate":{"1":22, "100":34},
+        "criRate":40,
+        "skill":{
+            "name":"Killing Intent of the Silent",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "0":"Enter sniper mode for {0} seconds. After every {1} seconds of aiming,<br>deal {2}x damage (able to crit) to the furthest target and decrease<br>their damage by {3}% for 3 seconds.<br><br>Passive: Normal attacks against armorless enemies deal {4}x damage.",
+                "format":[
+                    {"effectIndex":1, "attr":"time"}, 
+                    {"effectIndex":4, "attr":"value"},
+                    {"effectIndex":5, "attr":"value"},
+                    {"effectIndex":3, "attr":"value"},
+                    {"effectIndex":0, "attr":"value"}
+                    ]},
+            "effects":[
+                {"filter":"passive", "value":{"1":1.05, "10":1.05}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"attackFrame", "value":{"1":75,"10":60}, "time":{"1":9, "10":9}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"dmg", "value":{"1":50,"10":100}, "time":{"1":9, "10":9}},
+                {"filter":"passive", "value":{"1":5, "10":10}},
+                {"filter":"passive", "value":{"1":2.5, "10":2}},
+                {"filter":"passive", "value":{"1":1.5, "10":2}}
+            ]},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":18,"5":18}},
+            "grid":[
+                {"x":1, "y":1},
+                {"x":1, "y":0}]}},
 	{"id":"218", "name":"T77", "type":"smg", "rarity":"3",
         "isUnreleased":true,
         "hp":{"1":"93", "100":"186"},
