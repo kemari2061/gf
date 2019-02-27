@@ -1,4 +1,5 @@
 {"update":[
+    {"date": "Tue Feb 26 22:00:00 2019 +0100", "log": ["Added T31. Unreleased in EN T-Dolls now greyed out."]},
     {"date": "Tue Feb 26 08:00:00 2019 +0100", "log": ["Added M200. NOTE: Passive 1.05x against unarmored not working atm."]},
     {"date": "Sat Feb 09 20:00:00 2019 +0100", "log": ["Added import/export feature. Added delete for saves."]},
     {"date": "Sat Feb 02 18:00:00 2019 +0100", "log": ["Added save/load feature."]},

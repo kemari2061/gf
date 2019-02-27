@@ -5547,6 +5547,32 @@
             "grid":[
                 {"x":1, "y":1},
                 {"x":1, "y":0}]}},
+    {"id":"247", "name":"K31", "type":"rf", "rarity":"4",
+        "isUnreleased":true,
+        "hp":{"1":39, "100":78},
+        "dmg":{"1":45, "100":126},
+        "hit":{"1":10, "100":78},
+        "dodge":{"1":5, "100":37},
+        "fireOfRate":{"1":26, "100":39},
+        "criRate":40,
+        "skill":{
+            "name":"Emergency Speed",
+            "firstCooldownTime":6,
+            "cooldownTime":{"1":10, "10": 8},
+            "detailText":{
+                "0":"At the cost of decreasing her own accuracy by {0}%, increases her own rate of fire by {1}% for {2} seconds.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":1, "attr":"time"}]},
+            "effects":[
+                {"filter":"active", "type":"debuff", "target":"self", "attribute":"hit", "value":{"1":20, "10":35}, "time":{"1":3, "10":5}},
+                {"filter":"active", "type":"buff", "target":"self", "attribute":"fireOfRate", "value":{"1":40, "10":80}, "time":{"1":3, "10":5}}
+            ]},
+        "aura":{
+            "target":"hg", "effect":{
+                "cooldownTime":{"0":15,"5":15}
+            },
+            "grid":[
+                {"x":1, "y":0},
+                {"x":1, "y":-1}]}},
 	{"id":"218", "name":"T77", "type":"smg", "rarity":"3",
         "isUnreleased":true,
         "hp":{"1":"93", "100":"186"},
