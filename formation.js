@@ -1209,6 +1209,9 @@ function updatePickerByType(type, auraAttr) {
 
             item.css('background-image', 'url("assets/buttons/' + parseInt(v.id) + '.png")');
 
+            if (v.isUnreleased) {
+                item.css('filter','grayscale(100%)');
+            }
             /*
             if (v.id == 26) {
                 item.css('background-color', 'white');
