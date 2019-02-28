@@ -3336,7 +3336,7 @@
         "ammoCount":"5",
         "armor":{"1":"3", "100":"23"},
         "skill":{
-            "name":"巨羚號角",
+            "name":"Big Antelope's Horn",
             "type":"attack",
             "target":"enemy",
             "firstCooldownTime":"8",
