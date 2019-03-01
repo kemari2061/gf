@@ -3406,6 +3406,35 @@
             "grid":[
                 {"x":"-1", "y":"0"},
                 {"x":"-1", "y":"-1"}]}},
+    {"id":"163", "name":"AA-12", "type":"sg", "rarity":"5",
+        "isUnreleased": true,
+        "hp":{"1":135, "100":269},
+        "dmg":{"1":12, "100":30},
+        "dodge":{"1":2, "100":11},
+        "hit":{"1":2, "100":12},
+        "fireOfRate":{"1":27, "100":39},
+        "ammoCount":5,
+        "armor":{"1":3, "100":22},
+        "skill":{
+            "name":"Ketosis",
+            "firstCooldownTime":8,
+            "cooldownTime":{"1":20, "10": 16},
+            "detailText":{
+                "val":"Increase ammo by {1} and self rate of fire by {0}%.<br>Each attack's knockback chance is increased to {2}%. Duration {3} seconds.",
+                "format":[{"effectIndex":0, "attr":"value"}, {"effectIndex":1, "attr":"value"}, {"effectIndex":2, "attr":"value"}, {"effectIndex":0, "attr":"time"}]
+            },
+            "effects":[
+                {"filter":"active", "type":"buff", "target":"self","attribute":"fireOfRate", "value":{"1":35, "10":80}, "time":{"1":6, "10":8}},
+                {"filter":"active", "type":"buff", "target":"self","attribute":"ammoCount", "value":{"1":5, "10":10}, "toFixedCount": 1},
+                {"value":{"1":7, "10":10}}
+            ]},
+        "aura":{
+            "target":"mg", "effect":{
+                "dmg":{"0":22}},
+            "self":{"x":1, "y":0},
+            "grid":[
+                {"x":-1, "y":-1},
+                {"x":-1, "y":0}]}},
     {"id":"150", "name":"Shipka", "type":"smg", "rarity":"4",
         "hp":{"1":"84", "100":"168"},
         "dmg":{"1":"9", "100":"24"},
