@@ -70,6 +70,22 @@ body {
     max-height:30px;
 }
 
+.char .buffs {
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 5px;
+}
+
+.char .buff_inner {
+    padding-left: 22px;
+    padding-right: 6px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-color: rgba(255,255,255,0.8);
+}
+
 .calculate_control .control_input {
     width:70px;
     height:20px;

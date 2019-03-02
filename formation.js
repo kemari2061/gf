@@ -1,4 +1,4 @@
-﻿
+
 const TYPES = ["hg", "smg", "ar", "rf", "mg", "sg"];
 const GRIDS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const SKILL_TYPE_IS_PERCENT = ["hit", "dodge", "armor", "fireOfRate", "dmg", "criRate", "cooldownTime", "criDmg", "movementSpeed", "rate", "reducedDamage"];
@@ -2526,6 +2526,26 @@ function updateCharObsForAura() {
             charObj.c.criRate = charObj.c.criRate * (1 + 0.01 * charObj.c.aura_criRate);
             charObj.c.cooldownTimeReduction = Math.min(30, charObj.c.aura_cooldownTime);
             charObj.c.armor = charObj.c.armor * (1 + 0.01 * charObj.c.aura_armor);
+
+            let aura_keys = Object.keys(charObj.c).filter(function(k) {
+                return k.indexOf('aura_') == 0;
+            });
+
+            let buffContainer = $(`.grid_container_${parseInt(i)+1} .buffs`).empty();
+            
+            let count = 0;
+            for (let key of aura_keys) {
+                console.log(`Buff render pos ${parseInt(i)+1} key ${key}`)
+                let buffAmount = charObj.c[key];
+                if (buffAmount > 0) {
+                    let buffDisplay = $('<span></span>').addClass(`buff_${key} buff_inner`).html(`${buffAmount}%`).css('background-image', `url("assets/buffs/buff_${key}.png` );
+                    buffContainer.prepend(buffDisplay);
+                    if (++count >= 2) {
+                        buffContainer.prepend('<br />');
+                        count = 0;
+                    }
+                }
+            }
         }
     }
 }
