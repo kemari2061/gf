@@ -1,4 +1,5 @@
 {"update":[
+    {"date": "Sat Mar 02 00:00:00 2019 +0100", "log": ["Added buff icon display."]},
     {"date": "Fri Mar 01 17:00:00 2019 +0100", "log": ["Added AA-12."]},
     {"date": "Tue Feb 26 22:00:00 2019 +0100", "log": ["Added T31. Unreleased in EN T-Dolls now greyed out."]},
     {"date": "Tue Feb 26 08:00:00 2019 +0100", "log": ["Added M200. NOTE: Passive 1.05x against unarmored not working atm."]},
