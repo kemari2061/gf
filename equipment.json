@@ -432,6 +432,12 @@
             "hit":{"max":4, "strengthenCoefficient":0.1},
             "dodge":{"max":8, "strengthenCoefficient":0.03},
             "criRate":{"max":15, "strengthenCoefficient":0.035}
+        }},
+    {"id":"132", "name":"MG4専用MGO", "type":"red_dot_sight", "rarity":"5", "can_char":["125"],
+        "effect":{
+            "hit":{"max":36, "strengthenCoefficient":0.1},
+            "fireOfRate":{"max":-1},
+            "criRate":{"max":25, "strengthenCoefficient":0.035}
         }}
 
 ],
