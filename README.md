@@ -5,8 +5,6 @@ English fork of chibimonxd's auto formation generation, original can be found [h
 
 This repo is a fork form gfeAsdf's repo, which can be found [here](https://www.github.com/gfeasdf/gf)
 
-[Logistics calculator](https://aristocratmc.github.io/gf/main.html)
+[Logistics calculator](https://kemari2061.github.io/gf/main.html)
 
-[DPS/Formation sim](https://aristocratmc.github.io/gf/main2.html)
-
-[Formation Generator](https://aristocratmc.github.io/gf/auto.html)
+[DPS/Formation sim](https://kemari2061.github.io/gf/main2.html)
