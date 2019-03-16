@@ -1,10 +1,8 @@
 # Girls' Frontline calculators
-English fork of ynntk4815's calculators, the original chinese calculators can be found [here](https://ynntk4815.github.io/gf/)
+本家 ynntk4815氏 計算機 [こちら](https://ynntk4815.github.io/gf/)
 
-English fork of chibimonxd's auto formation generation, original can be found [here](https://chibimonxd.github.io/gf/auto.html)
+英語版 aristocratmc氏 計算機 [こちら](https://aristocratmc.github.io/gf/)
 
-This repo is a fork form gfeAsdf's repo, which can be found [here](https://www.github.com/gfeasdf/gf)
+[後方支援 計算機](https://kemari2061.github.io/gf/main.html)
 
-[Logistics calculator](https://kemari2061.github.io/gf/main.html)
-
-[DPS/Formation sim](https://kemari2061.github.io/gf/main2.html)
+[DPS/編成 シミュレータ](https://kemari2061.github.io/gf/main2.html)
