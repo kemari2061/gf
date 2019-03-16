@@ -435,9 +435,9 @@
         }},
     {"id":"132", "name":"MG4専用MGO", "type":"red_dot_sight", "rarity":"5", "can_char":["125"],
         "effect":{
-            "hit":{"max":36, "strengthenCoefficient":0.1},
+            "hit":{"max":18, "strengthenCoefficient":0.2},
             "fireOfRate":{"max":-1},
-            "criRate":{"max":25, "strengthenCoefficient":0.035}
+            "criRate":{"max":15, "strengthenCoefficient":0.166}
         }}
 
 ],
