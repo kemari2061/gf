@@ -437,7 +437,7 @@
         "effect":{
             "hit":{"max":18, "strengthenCoefficient":0.1},
             "fireOfRate":{"max":-1},
-            "criRate":{"max":15, "strengthenCoefficient":0.066}
+            "criRate":{"max":15, "strengthenCoefficient":0.067}
         }}
 
 ],
