@@ -5,4 +5,4 @@
 
 [後方支援 計算機](https://kemari2061.github.io/gf/main.html)
 
-[DPS/編成 シミュレータ](https://kemari2061.github.io/gf/main2.html)
+[DPS/編成 シミュレータ](https://kemari2061.github.io/gf/main2.html) (自分用)
